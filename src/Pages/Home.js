@@ -21,8 +21,15 @@ import AmericanDollar from '../assets/videos/american-dollar.mp4';
 import MoneyReceivedFund from '../assets/videos/money-received-fund.mp4';
 import FemaleFingerHolding from '../assets/videos/female-finger-holding.mp4';
 import ScrollUp from '../assets/images/scrollup.svg';
+import Icon from '../assets/images/icon.svg';
+import ModalApp from '../Components/ModalApp';
+import Tab from '../Components/Tab';
+import ModalContact from '../Components/ModalContact';
+import { useState } from 'react';
 
 const Home = () => {
+    const [openModalApp, setOpenModalApp] = useState(false);
+    const [openModalContact, setOpenModalContact] = useState(false);
     return (
         <div>
             <div className="max-w-full flex justify-center">
@@ -59,17 +66,21 @@ const Home = () => {
                                     <img src={PlayStore} alt="playstore"/>
                                 </div>                      
                             </div>
-                            <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md">                         
+                            <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md"
+                                onClick={() => setOpenModalApp(true)}>                         
                                 <div className="flex justify-center items-center my-[15px] gap-[22px]">
                                     <div>
                                         <img src={QRCode} alt="qrcode"/>
                                     </div>                   
-                                    <div className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                    <button className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black text-[16px]"
                                         style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         Show QR to download new version app on your mobile
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
+                            <ModalApp open={openModalApp} onClose={() => setOpenModalApp(false)}>
+                                                    
+                            </ModalApp>
                         </div>
                     </div>
 
@@ -131,10 +142,11 @@ const Home = () => {
                             Merchants created
                         </div>
                     </div>
-                    <div>
+                    <div onClick={() => setOpenModalContact(true)}>
                         <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white text-center text-[20px]"
                             style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>Create yours now</button>
                     </div>
+                    <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
                 </div>
             </div>
     
@@ -524,5 +536,5 @@ const Home = () => {
             behavior: "smooth" // Optional: Scroll smoothly to the top
         });
     }
-  
+
   export default Home;
