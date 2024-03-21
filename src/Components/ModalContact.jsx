@@ -47,7 +47,7 @@ export default function ModalContact({ open, onClose, children }) {
                     </div>
 
                     <div className="mt-[78px] flex flex-col justify-center items-center gap-[30px]">
-                        <div className="flex flex-col justify-center items-center gap-[10px]">
+                        <div className="flex flex-col items-center gap-[10px]">
                             <div className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0">
                                 Your Name
                             </div>
@@ -63,7 +63,7 @@ export default function ModalContact({ open, onClose, children }) {
                             <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd]" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
 
-                        <div className="flex flex-col justify-center items-center gap-[10px]">
+                        <div className="flex flex-col items-center gap-[10px]">
                             <div className="flex w-[125px] h-3 flex-col justify-center items-center flex-shrink-0">
                                 Message
                             </div>
