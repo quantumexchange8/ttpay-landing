@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import Icon from '../assets/images/icon.svg';
 import Close from '../assets/images/close.svg';
 import TabComponent from '../Components/Tab';

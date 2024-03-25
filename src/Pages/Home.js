@@ -21,9 +21,9 @@ import AmericanDollar from '../assets/videos/american-dollar.mp4';
 import MoneyReceivedFund from '../assets/videos/money-received-fund.mp4';
 import FemaleFingerHolding from '../assets/videos/female-finger-holding.mp4';
 import ScrollUp from '../assets/images/scrollup.svg';
-import Icon from '../assets/images/icon.svg';
+// import Icon from '../assets/images/icon.svg';
 import ModalApp from '../Components/ModalApp';
-import Tab from '../Components/Tab';
+// import Tab from '../Components/Tab';
 import ModalContact from '../Components/ModalContact';
 import { useState } from 'react';
 
@@ -88,43 +88,43 @@ const Home = () => {
                         <div className="flex flex-col gap-[20px]">
                             <div className="flex flex-row gap-[20px]">
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo11} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo11} title="Home Video 1-1"></video>
                                 </div>
     
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo12} title="Home Video 1-2"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo21} title="Home Video 2-1"></video>
                                 </div>
-    
+
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo13} title="Home Video 1-3"></video>
-                                </div>
-                            </div>
-    
-                            <div className="flex flex-row gap-[20px]">
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo21} title="Home Video 2-1"></video>
-                                </div>
-    
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo22} title="Home Video 2-2"></video>
-                                </div>
-    
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo23} title="Home Video 2-3"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo31} title="Home Video 3-1"></video>
                                 </div>
                             </div>
     
                             <div className="flex flex-row gap-[20px]">
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo31} title="Home Video 3-1"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo12} title="Home Video 1-2"></video>
                                 </div>
     
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo32} title="Home Video 3-2"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo22} title="Home Video 2-2"></video>
                                 </div>
     
                                 <div className="w-[140px] h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-fill w-full h-full" src={HomeVideo33} title="Home Video 3-3"></video>
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo32} title="Home Video 3-2"></video>
+                                </div>
+                            </div>
+    
+                            <div className="flex flex-row gap-[20px]">
+                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo13} title="Home Video 1-3"></video>
+                                </div>
+
+                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo23} title="Home Video 2-3"></video>
+                                </div>
+    
+                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo33} title="Home Video 3-3"></video>
                                 </div>
                             </div>
                         </div>  
@@ -143,7 +143,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div onClick={() => setOpenModalContact(true)}>
-                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white text-center text-[20px]"
+                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px]"
                             style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>Create yours now</button>
                     </div>
                     <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
@@ -163,7 +163,7 @@ const Home = () => {
                     <div className="mt-[200px] flex flex-col gap-[300px]">
                         <div className="h-[587px] flex-shrink-0 flex flex-row justify-between relative">
                             <div className="flex flex-col">
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute top-0 left-[200px]">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="gap-5 flex">
                                         <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -181,7 +181,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-[130px] left-[230px]">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[130px] left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="gap-5 flex">
                                         <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -199,7 +199,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-0 left-0">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-0 left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="gap-5 flex">
                                         <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -218,7 +218,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[500px] h-[500px] flex-shrink-0 mt-[33px] mb-[54px]">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-fill w-full h-full" src={WomanCreditCard} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={WomanCreditCard} title="Home Video 1-1"></video>
                                 </div>
                             </div>
                     
@@ -337,14 +337,14 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[500px] h-[500px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-fill w-full h-full" src={DigitalIdentityBlocking} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={DigitalIdentityBlocking} title="Home Video 1-1"></video>
                                 </div>
                             </div>   
                         </div>
 
                         <div className="h-[500px] flex-shrink-0 flex flex-row justify-between items-center">
                             <div className="w-[500px] h-[500px] flex-shrink-0">
-                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-fill w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
+                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
                             </div>
                             <div className="flex flex-col gap-[30px] text-black">
                                 <div className="flex w-[420px] h-[70px] flex-col justify-center flex-shrink-0 text-[36px]" 
@@ -477,15 +477,15 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[500px] h-[500px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-fill w-full h-full" src={MoneyReceivedFund} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={MoneyReceivedFund} title="Home Video 1-1"></video>
                                 </div>
                             </div>
                        
                         </div>
 
                         <div className="h-[500px] flex-shrink-0 flex flex-row justify-between items-center">
-                            <div className="w-[500px] h-[500px] flex-shrink-0">
-                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-fill w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1"></video>
+                            <div className="w-[500px] h-[500px]">
+                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1"></video>
                             </div>
                             <div className="flex flex-col gap-[30px] text-black">
                                 <div className="flex w-[420px] h-[70px] flex-col justify-center flex-shrink-0 text-[36px]" 

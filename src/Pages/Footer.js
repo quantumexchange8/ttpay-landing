@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>     
-                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center gap-4">
+                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white flex items-center justify-center gap-4">
                         <div style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"20px", fontStyle:"normal", lineHeight: "normal",}}>
                             Start from here 
                         </div>
