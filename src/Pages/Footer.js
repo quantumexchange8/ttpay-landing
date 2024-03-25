@@ -3,8 +3,13 @@ import Arrow from '../assets/images/arrow.svg';
 import AppStore from '../assets/images/appstore.svg';
 import PlayStore from '../assets/images/playstore.svg';
 import QRCode from '../assets/images/qrcode.svg';
+import ModalApp from '../Components/ModalApp';
+import { useState } from 'react';
+import ModalContact from '../Components/ModalContact';
 
 const Footer = () => {
+    const [openModalApp, setOpenModalApp] = useState(false);
+    const [openModalContact, setOpenModalContact] = useState(false);
   return (
     <div>
         <div className="bg-[#f4efff] h-[200px] max-w-full flex justify-center">
@@ -29,12 +34,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>     
-                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white flex items-center justify-center gap-4">
+                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white flex items-center justify-center gap-4" onClick={() => setOpenModalContact(true)} style={{ cursor: 'pointer' }}>
                         <div style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"20px", fontStyle:"normal", lineHeight: "normal",}}>
                             Start from here 
                         </div>
                         <img src={Arrow} alt="icon"/>
-                    </div>        
+                    </div>
+                    <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
                 </div>
             </div>
         </div>
@@ -53,7 +59,8 @@ const Footer = () => {
                         </div>                      
                     </div>
 
-                    <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md">                         
+                    <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md"
+                                onClick={() => setOpenModalApp(true)} style={{ cursor: 'pointer' }}>                         
                         <div className="flex justify-center items-center my-[15px] gap-[22px]">
                             <div>
                                 <img src={QRCode} alt="qrcode"/>
@@ -64,6 +71,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                    <ModalApp open={openModalApp} onClose={() => setOpenModalApp(false)}>
+                        {/* Content of the modal */}
+                    </ModalApp>
                 </div>
 
                 <div className="flex w-[130px] h-[63px] flex-col justify-center flex-shrink-0"

@@ -6,6 +6,8 @@ import Google from '../assets/images/google.svg';
 import Drive from '../assets/images/drive.svg';
 import Received from '../assets/images/received.svg';
 import Sent from '../assets/images/sent.svg';
+import ApprovedWithoutRed from '../assets/images/approved-without-red.svg';
+import RedIcon from '../assets/images/red-icon.svg';
 import HomeVideo11 from '../assets/videos/home-video-1-1.mp4';
 import HomeVideo12 from '../assets/videos/home-video-1-2.mp4';
 import HomeVideo13 from '../assets/videos/home-video-1-3.mp4';
@@ -67,15 +69,15 @@ const Home = () => {
                                 </div>                      
                             </div>
                             <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md"
-                                onClick={() => setOpenModalApp(true)}>                         
+                                onClick={() => setOpenModalApp(true)} style={{ cursor: 'pointer' }}>                         
                                 <div className="flex justify-center items-center my-[15px] gap-[22px]">
                                     <div>
                                         <img src={QRCode} alt="qrcode"/>
                                     </div>                   
-                                    <button className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                    <div className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black text-[16px]"
                                         style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         Show QR to download new version app on your mobile
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                             <ModalApp open={openModalApp} onClose={() => setOpenModalApp(false)}>
@@ -131,7 +133,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-    
+            {/* Part 2 */}
             <div className="bg-[#f4efff] h-[200px] max-w-full flex justify-center">
                 <div className="w-[1000px] flex justify-between items-center">
                     <div className="w-[385px] h-[180px]">
@@ -149,7 +151,7 @@ const Home = () => {
                     <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
                 </div>
             </div>
-    
+            {/* Part 3 */}
             <div className="max-w-full flex justify-center">
                 <div className="w-[1000px] mb-[200px]">
                     <div className="flex justify-center">
@@ -159,7 +161,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
+                    {/* Part 3-1-notif1,2,3 */}
                     <div className="mt-[200px] flex flex-col gap-[300px]">
                         <div className="h-[587px] flex-shrink-0 flex flex-row justify-between relative">
                             <div className="flex flex-col">
@@ -221,7 +223,7 @@ const Home = () => {
                                     <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={WomanCreditCard} title="Home Video 1-1"></video>
                                 </div>
                             </div>
-                    
+                            {/* Part 3-1-text */}
                             <div className="flex flex-col gap-[30px] mt-[135px]">
                                 <div className="flex w-[420px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[36px]" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
@@ -259,7 +261,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
+                        {/* Part 3-2-text */}
                         <div className="h-[500px] flex-shrink-0 flex flex-row justify-between">
                             <div className="flex flex-col gap-[30px] mt-[140px] text-black">
                                 <div className="flex w-[420px] h-[30px] flex-col justify-center flex-shrink-0 text-[36px]" 
@@ -298,9 +300,9 @@ const Home = () => {
                                           
                                 </div>
                             </div>
-
+                            {/* Part 3-2-notif1,2 */}
                             <div className="flex flex-col relative">
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute top-0 left-0">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute top-0 left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="gap-5 flex">
                                         <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
                                             <img src={Google} alt="icon"/>
@@ -318,7 +320,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-0 right-0">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-0 right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="gap-5 flex">
                                         <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
                                             <img src={Drive} alt="icon"/>
@@ -343,8 +345,19 @@ const Home = () => {
                         </div>
 
                         <div className="h-[500px] flex-shrink-0 flex flex-row justify-between items-center">
-                            <div className="w-[500px] h-[500px] flex-shrink-0">
+                            <div className="w-[500px] h-[500px] flex-shrink-0 relative">
                                 <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
+                                <div className="absolute bottom-[115px] right-[80px] w-[170px] h-[50px] flex items-end justify-end gap-[10px]">
+                                    <div className="w-[50px] h-[50px] flex-shrink-0">
+                                        <img src={ApprovedWithoutRed} alt="Approved Without Red" className="w-50 h-50 flex-shrink-0"/>
+                                    </div>
+                                    <div className="w-[50px] h-[50px] flex-shrink-0">
+                                        <img src={Approved} alt="Approved" className="w-50 h-50 flex-shrink-0"/>
+                                    </div>
+                                    <div className="w-[50px] h-[50px] flex-shrink-0">
+                                        <img src={RedIcon} alt="Red Icon" className="w-50 h-50 flex-shrink-0"/>
+                                    </div>
+                                </div>
                             </div>
                             <div className="flex flex-col gap-[30px] text-black">
                                 <div className="flex w-[420px] h-[70px] flex-col justify-center flex-shrink-0 text-[36px]" 
@@ -400,7 +413,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col relative">
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute top-0 right-0">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute top-0 right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="flex justify-around mt-[14px] mx-[14px]">
                                         <div className="flex gap-[10px]">
                                             <div className="w-3 h-3 flex-shrink-0">
@@ -438,7 +451,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-0 left-10">
+                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-gray-200 bg-opacity-90 absolute bottom-0 left-10 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="flex justify-around mt-[14px] mx-[14px]">
                                         <div className="flex gap-[10px]">
                                             <div className="w-3 h-3 flex-shrink-0">
