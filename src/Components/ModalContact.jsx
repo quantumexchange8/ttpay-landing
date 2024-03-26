@@ -52,7 +52,7 @@ export default function ModalContact({ open, onClose, children }) {
                                 Your Name
                             </div>
                             {/* <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd]" /> */}
-                            <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd]" value={name} onChange={(e) => setName(e.target.value)}/>
+                            <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3" value={name} onChange={(e) => setName(e.target.value)}/>
                         </div>
 
                         <div className="flex flex-col items-center gap-[10px]">
@@ -60,7 +60,7 @@ export default function ModalContact({ open, onClose, children }) {
                                 Email
                             </div>
                             {/* <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd]"/> */}
-                            <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd]" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input className="w-[320px] h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
 
                         <div className="flex flex-col items-center gap-[10px]">
@@ -68,11 +68,25 @@ export default function ModalContact({ open, onClose, children }) {
                                 Message
                             </div>
                             {/* <input className="w-[320px] h-[200px] flex flex-shrink-0 rounded-[10px] bg-[#ddd]"/> */}
-                            <input className="w-[320px] h-[200px] flex-shrink-0 rounded-[10px] bg-[#ddd]" value={message} onChange={(e) => setMessage(e.target.value)}/>
+                            {/* <input className="w-[320px] h-[200px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3" value={message} onChange={(e) => setMessage(e.target.value)}/> */}
+                            <textarea className="resize-none w-[320px] h-[200px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3 py-3" value={message} onChange={(e) => setMessage(e.target.value)}
+                            style={{
+                                overflowY: 'scroll', // Add the ability to scroll
+                                // Hide scrollbar for WebKit browsers
+                                scrollbarWidth: 'none', // Firefox
+                                msOverflowStyle: 'none', // IE and Edge
+                                WebkitOverflowScrolling: 'none', // iOS Safari
+                                '&::WebkitScrollbar': {
+                                  display: 'none', // Hide scrollbar for Chrome, Safari, and Opera
+                                },
+                              }}
+                            
+                            ></textarea>
+                            {/* overflow-hidden */}
                         </div>
                     </div>
                     
-                    <div className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[20px] mt-[66px] mb-[46px] mx-[150px]">
+                    <div className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[20px] mt-[66px] mb-[46px] mx-[150px]" style={{ cursor: 'pointer' }}>
                         <div style={{ fontFamily: "SF-Pro-Display-Bold", fontStyle: "normal", lineHeight: "normal" }}>Send</div>
                     </div>                              
                 </div>                

@@ -47,26 +47,37 @@ const Footer = () => {
         <div className="max-w-full flex justify-center">
             <div className="w-[1000px] h-[215px] flex justify-between mt-[26px]">
                 <div className="w-[463px] h-[70px] flex-shrink-0 flex gap-2">                 
-                    <div className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center">
+                    <div 
+                    className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    style={{ cursor: 'pointer' }}
+                    >
                         <div className="w-[35.957px] h-[44px] flex-shrint-0">
                             <img src={AppStore} alt="appstore"/>
                         </div>                                                                    
                     </div>
 
-                    <div className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center">
+                    <div 
+                    className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    style={{ cursor: 'pointer' }}
+                    >
                         <div className="w-10 h-11 flex-shrink-0">
                             <img src={PlayStore} alt="playstore"/>
                         </div>                      
                     </div>
 
-                    <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md"
-                                onClick={() => setOpenModalApp(true)} style={{ cursor: 'pointer' }}>                         
+                    <div 
+                    className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                    onClick={() => setOpenModalApp(true)} 
+                    style={{ cursor: 'pointer' }}
+                    >                         
                         <div className="flex justify-center items-center my-[15px] gap-[22px]">
                             <div>
                                 <img src={QRCode} alt="qrcode"/>
                             </div>                   
-                            <div className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black"
-                                style={{ fontFamily:"SF-Pro-Display-Medium", fontSize:"16px", fontStyle:"normal", lineHeight:"normal" }}>
+                            <div 
+                            className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black"
+                            style={{ fontFamily:"SF-Pro-Display-Medium", fontSize:"16px", fontStyle:"normal", lineHeight:"normal" }}
+                            >
                                 Show QR to download new version app on your mobile
                             </div>
                         </div>

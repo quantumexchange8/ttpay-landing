@@ -33,7 +33,7 @@ const Home = () => {
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
     return (
-        <div>
+        <div className="wrapper min-w-[393px] w-full">  
             <div className="max-w-full flex justify-center">
                 <div className="w-[1000px] flex flex-row justify-between mb-[200px]">
                     <div className="flex flex-col gap-[30px]">
@@ -58,18 +58,28 @@ const Home = () => {
                             </div>           
                         </div>
                         <div className="w-[463px] h-[70px] flex-shrink-0 flex gap-2">                 
-                            <div className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center">
+                            <div 
+                            className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            style={{ cursor: 'pointer' }}
+                            >
                                 <div className="w-[35.957px] h-[44px] flex-shrint-0">
                                     <img src={AppStore} alt="appstore"/>
                                 </div>                                                                    
                             </div>
-                            <div className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center">
+                            <div 
+                            className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            style={{ cursor: 'pointer' }}
+                            >
                                 <div className="w-10 h-11 flex-shrink-0">
                                     <img src={PlayStore} alt="playstore"/>
                                 </div>                      
                             </div>
-                            <div className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md"
-                                onClick={() => setOpenModalApp(true)} style={{ cursor: 'pointer' }}>                         
+                            <div 
+                            className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                            // hover:animate-bounce
+                            onClick={() => setOpenModalApp(true)} 
+                            style={{ cursor: 'pointer' }}
+                            >      
                                 <div className="flex justify-center items-center my-[15px] gap-[22px]">
                                     <div>
                                         <img src={QRCode} alt="qrcode"/>
@@ -145,7 +155,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div onClick={() => setOpenModalContact(true)}>
-                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px]"
+                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]"
                             style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>Create yours now</button>
                     </div>
                     <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
@@ -534,8 +544,15 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-6 right-6">
-                <div className="w-[50px] h-[50px] flex-shrink-0" onClick={scrollToTop}>
+            <div 
+            className="fixed bottom-6 right-6 animate-bounce" 
+            style={{ animationDuration: '1.5s' }}
+            >  
+                <div 
+                className="w-[50px] h-[50px] flex-shrink-0" 
+                onClick={scrollToTop}
+                style={{ cursor: 'pointer' }}
+                >
                     <img src={ScrollUp} alt="icon"/>
                 </div>
             </div>
