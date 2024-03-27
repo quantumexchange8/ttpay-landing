@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'xs': '393px',
+      // => @media (min-width: 393px) { ... }
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -19,6 +22,8 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+
+      'cus-lg': '1053px',
     },
     extend: {
       colors: {
