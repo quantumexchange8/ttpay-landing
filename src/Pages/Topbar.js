@@ -21,47 +21,69 @@ const Topbar = () => {
     }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
     return (
-        <div>
-            <div className="bg-[#f4efffe6] max-w-full h-[70px] fixed z-50 flex justify-center backdrop-blur-sm xs:w-full sm:w-full md:w-full lg:w-full xl:w-full">
-                <div className="w-[1000px] relative">
-                {/* border border-red-500 */}
-                    <div className="start-end flex justify-between items-center h-full">
+        <div className="TOPBAR">
+            <div className="bg-[#f4efffe6] h-[70px] fixed z-50 flex justify-center backdrop-blur-sm w-full">
+                <div className="flex items-center px-5 w-full sm:w-[1000px] md:px-0">
+                {/* z */}
+                    <div className="flex justify-between w-full items-center h-full">
                         <div 
                             className="w-[50px] h-[50px] rounded-[10px]"
                             style={{ cursor: 'pointer' }}
                         >
                             <img src={Icon} alt="icon"/>
                         </div>
-                        <div>
-                            {/* Render button for non-mobile devices */}
-                            {!isSmallScreen ? (
-                                <button 
-                                    className="w-[127px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px]"
-                                    onClick={() => setOpenModalApp(true)}
-                                    style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal" }}
-                                >
-                                    Download
-                                </button>
-                            ) : (
-                                // Render download icon for mobile devices
+                        <div className="hidden sm:flex items-center gap-5">
+                            {/* World icon positioned above the start-end container */}
+                            <div className="">
+                            {/* absolute top-0 left-0 mt-[-50px] ml-2 w-full h-full */}
                                 <img 
-                                    src={DownloadIcon} 
-                                    alt="Download" 
-                                    style={{ cursor: 'pointer' }} 
-                                    onClick={() => setOpenModalApp(true)} 
+                                    src={World} 
+                                    alt="icon"
+                                    className="w-10 h-10"
+                                    style={{ cursor: 'pointer' }}
                                 />
-                            )}
+                            </div>
+                            <div>
+                                {/* Render button for non-mobile devices */}
+                                {!isSmallScreen ? (
+                                    <button 
+                                        className="w-[127px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px]"
+                                        onClick={() => setOpenModalApp(true)}
+                                        style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal" }}
+                                    >
+                                        Download
+                                    </button>
+                                ) : (
+                                    // Render download icon for mobile devices
+                                    <img 
+                                        src={DownloadIcon} 
+                                        alt="Download" 
+                                        style={{ cursor: 'pointer' }} 
+                                        onClick={() => setOpenModalApp(true)} 
+                                    />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                    {/* World icon positioned above the start-end container */}
-                    <div className="absolute flex top-[15px] right-[153px]">
-                    {/* absolute top-0 left-0 mt-[-50px] ml-2 w-full h-full */}
-                        <img 
-                            src={World} 
-                            alt="icon"
-                            className="w-10 h-10"
-                            style={{ cursor: 'pointer' }}
-                        />
+                        <div className="flex sm:hidden">
+                            {/* World icon positioned above the start-end container */}
+                            <div className="">
+                            {/* absolute top-0 left-0 mt-[-50px] ml-2 w-full h-full */}
+                                <img 
+                                    src={World} 
+                                    alt="icon"
+                                    className="w-10 h-10"
+                                    style={{ cursor: 'pointer' }}
+                                />
+                            </div>
+                        </div>
+                        <div className="flex sm:hidden">
+                            <img 
+                                src={DownloadIcon} 
+                                alt="Download" 
+                                style={{ cursor: 'pointer' }} 
+                                onClick={() => setOpenModalApp(true)} 
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

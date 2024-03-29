@@ -33,19 +33,29 @@ const Home = () => {
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
     return (
-        <div className="wrapper min-w-[393px] w-full">  
-            <div className="max-w-full flex justify-center">
-                <div className="w-[1000px] flex flex-row justify-between mb-[200px]">
-                    <div className="flex flex-col gap-[30px]">
-                        <div className="flex w-[420px] h-[180px] flex-col justify-center flex-shrink-0 mt-[190px] text-black text-[40px]">
-                            <div style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                Release your concerns about cryptocurrency transactions with your
+        <div className="wrapper min-w-[390px] w-full *:">  
+            <div className="max-w-full flex justify-center h-[1100px] md:h-full">
+                <div className="flex flex-col w-[390px] md:flex-row justify-center mb-[200px] md:w-[1000px]">
+                    <div className="flex flex-col w-full h-[460px]">
+                        <div className="flex w-full md:w-[420px] flex-col justify-center flex-shrink-0 mt-[150px] text-black text-[28px] md:text-[40px]">
+                            <div className="w-[287px] h-[210px] md:w-[350px] md:h-[280px] px-5 md:px-0" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                                Release your concerns about cryptocurrency transactions with your <span style={{ color:"#0038FF" }}> trusted digital wallet.</span>
                             </div>
-                            <div style={{ color:"#0038FF", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                            {/* <div style={{ color:"#0038FF", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                 trusted digital wallet.
+                            </div> */}
+                        </div>
+                        <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
+                            <div className="hidden sm:block">
+                                Your gateway to digital currencies and beyond. <br />
+                                Trade, transfer funds, and make transactions in <br />
+                                one secure and convenient application.
+                            </div>
+                            <div className="sm:hidden w-[310px] h-[90px]">
+                                Your gateway to digital currencies and beyond. Trade, transfer funds, and make transactions in one secure and convenient application.
                             </div>
                         </div>
-                        <div className="flex w-[450px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[20px]"
+                        {/* <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin"
                             style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }} >
                             <div >
                                 Your gateway to digital currencies and beyond. 
@@ -56,35 +66,35 @@ const Home = () => {
                             <div>
                                 one secure and convenient application.
                             </div>           
-                        </div>
-                        <div className="w-[463px] h-[70px] flex-shrink-0 flex gap-2">                 
+                        </div> */}
+                        <div className="w-[463px] h-[70px] mt-[40px] px-5 md:px-0 md:mt-[20px] flex gap-2">                 
                             <div 
-                            className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                             style={{ cursor: 'pointer' }}
                             >
-                                <div className="w-[35.957px] h-[44px] flex-shrint-0">
+                                <div className="w-[22.289px] h-[27.274px] md:w-[35.957px] md:h-[44px] flex-shrint-0">
                                     <img src={AppStore} alt="appstore"/>
                                 </div>                                                                    
                             </div>
                             <div 
-                            className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                             style={{ cursor: 'pointer' }}
                             >
-                                <div className="w-10 h-11 flex-shrink-0">
+                                <div className="w-[24.795px] h-[27.274px] md:w-10 md:h-11 flex-shrink-0">
                                     <img src={PlayStore} alt="playstore"/>
                                 </div>                      
                             </div>
                             <div 
-                            className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                            className="w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
                             // hover:animate-bounce
                             onClick={() => setOpenModalApp(true)} 
                             style={{ cursor: 'pointer' }}
                             >      
-                                <div className="flex justify-center items-center my-[15px] gap-[22px]">
-                                    <div>
+                                <div className="flex justify-center items-center my-[8px] md:my-[15px] gap-[22px]">
+                                    <div className="w-[24.795px] h-[24.795px]">
                                         <img src={QRCode} alt="qrcode"/>
                                     </div>                   
-                                    <div className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                    <div className="flex w-[120px] h-5 md:w-[210px] md:h-10 flex-col justify-center flex-shrink-0 text-black text-[10px] md:text-[16px]"
                                         style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         Show QR to download new version app on your mobile
                                     </div>
@@ -97,45 +107,45 @@ const Home = () => {
                     </div>
 
                     <div className="mt-[150px]">
-                        <div className="flex flex-col gap-[20px]">
-                            <div className="flex flex-row gap-[20px]">
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                        <div className="flex flex-col  md:gap-[20px] gap-[15.17px] px-5 md:px-0">
+                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo11} title="Home Video 1-1"></video>
                                 </div>
     
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo21} title="Home Video 2-1"></video>
                                 </div>
 
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo31} title="Home Video 3-1"></video>
                                 </div>
                             </div>
     
-                            <div className="flex flex-row gap-[20px]">
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo12} title="Home Video 1-2"></video>
                                 </div>
     
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo22} title="Home Video 2-2"></video>
                                 </div>
     
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo32} title="Home Video 3-2"></video>
                                 </div>
                             </div>
     
-                            <div className="flex flex-row gap-[20px]">
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo13} title="Home Video 1-3"></video>
                                 </div>
 
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo23} title="Home Video 2-3"></video>
                                 </div>
     
-                                <div className="w-[140px] h-[140px] flex-shrink-0">
+                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
                                     <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo33} title="Home Video 3-3"></video>
                                 </div>
                             </div>
@@ -144,13 +154,13 @@ const Home = () => {
                 </div>
             </div>
             {/* Part 2 */}
-            <div className="bg-[#f4efff] h-[200px] max-w-full flex justify-center">
-                <div className="w-[1000px] flex justify-between items-center">
-                    <div className="w-[385px] h-[180px]">
-                        <div className="text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+            <div className="bg-[#f4efff] w-[393px] h-[306px] md:h-[200px] md:w-full flex justify-center">
+                <div className="flex-col md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
+                    <div className="flex flex-col justify-center w-275 h-90 flex-shrink-0 mt-[65px] md:mt-0">
+                        <div className="text-[64px] md:text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             386,370
                         </div>
-                        <div className="text-[40px]" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                        <div className="text-[32px] md:text-[40px]" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             Merchants created
                         </div>
                     </div>
@@ -163,29 +173,35 @@ const Home = () => {
             </div>
             {/* Part 3 */}
             <div className="max-w-full flex justify-center">
-                <div className="w-[1000px] mb-[200px]">
+                <div className="w-[390px] md:w-[1000px] mb-[200px]">
                     <div className="flex justify-center">
-                        <div className="flex w-[800px] h-[90px] flex-col justify-center flex-shrink-0 mt-[200px] text-black text-center text-[48px]">
-                            <div style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                        <div className="flex w-[390px] md:w-[800px] h-[150px] flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[200px] text-black text-center text-[32px] md:text-[48px]">
+                            <div className="hidden md:block w-[700px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                 Every feature you need for business freedom in one digital wallet
+                            </div>
+                            <div className="sm:hidden" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                                Every feature you <br />
+                                need for business <br />
+                                freedom in one digital <br />
+                                wallet
                             </div>
                         </div>
                     </div>
                     {/* Part 3-1-notif1,2,3 */}
-                    <div className="mt-[200px] flex flex-col gap-[300px]">
-                        <div className="h-[587px] flex-shrink-0 flex flex-row justify-between relative">
-                            <div className="flex flex-col">
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
-                                    <div className="gap-5 flex">
-                                        <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
+                    <div className="mt-[50px] md:mt-[200px] flex flex-col gap-[300px]">
+                        <div className="h-[587px] flex-shrink-0 flex flex-col md:flex-row justify-between relative">
+                            <div className="flex flex-col h-[380px] md:h-full">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                    <div className="md:gap-5 flex gap-3 h-[50px]">
+                                        <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
                                         </div>
-                                        <div className="flex flex-col mt-[19px] gap-[10px]">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                        <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 Received approved
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[14px]"
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                                 $3,488.00 USDT for TRON
                                             </div>
@@ -193,17 +209,17 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[130px] left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
-                                    <div className="gap-5 flex">
-                                        <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[130px] left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                    <div className="md:gap-5 flex gap-3 h-[50px]">
+                                        <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
                                         </div>
-                                        <div className="flex flex-col mt-[19px] gap-[10px]">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                        <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 Received approved
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[14px]"
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                                 $5,000.00 USDT for TRON
                                             </div>
@@ -211,17 +227,17 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[300px] h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-0 left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
-                                    <div className="gap-5 flex">
-                                        <div className="flex w-[50px] h-[50px] justify-center items-center flex-shrink-0 mt-[15px] ml-[26px]">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-0 left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                    <div className="md:gap-5 flex gap-3 h-[50px]">
+                                        <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
                                         </div>
-                                        <div className="flex flex-col mt-[19px] gap-[10px]">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[16px]"
+                                        <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 Sent approved
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[14px]"
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                                 - $658.00 USDT for TRON
                                             </div>
@@ -229,7 +245,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[500px] h-[500px] flex-shrink-0 mt-[33px] mb-[54px]">
+                                <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 mt-[33px] mb-[54px]">
                                     <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={WomanCreditCard} title="Home Video 1-1"></video>
                                 </div>
                             </div>
