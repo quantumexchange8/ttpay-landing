@@ -12,25 +12,28 @@ const Footer = () => {
     const [openModalContact, setOpenModalContact] = useState(false);
   return (
     <div>
-        <div className="bg-[#f4efff] h-[200px] max-w-full flex justify-center">
-            <div className="w-[1000px] flex justify-between items-center">
-                <div className="flex flex-col gap-5 text-black">
-                    <div className="flex w-[459px] h-[30px] flex-col justify-center flex-shrink-0"
+        <div className="bg-[#f4efff] sm:w-full h-[442px] md:h-[200px] md:w-full flex justify-center">
+            <div className="flex-col w-full md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
+                <div className="flex flex-col text-black md:mt-[20px]">
+                    <div className="flex w-[349px] h-[90px] md:w-[459px] md:h-[30px] flex-col justify-center flex-shrink-0 text-[40px] text-center mt-[66px] md:mt-0"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"40px", fontStyle:"normal", lineHeight:"normal" }}>
                         Get the support you need
                     </div>
 
-                    <div className="flex w-[660px] h-[66px] flex-col justify-center flex-shrink-0"
-                        style={{ fontFamily:"SF-Pro-Display-Medium", fontSize:"20px", fontStyle:"normal", lineHeight:"normal" }}>
-                        <div>
-                            Use these comprehensive guides to understand the fundamentals of 
+                    <div className="flex w-full h-[95px] md:w-[660px] md:h-[66px] mt-[30px] md:mt-[20px] flex-col justify-center flex-shrink-0 text-[16px] md:text-[20px]"
+                        style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
+                        <div className="hidden sm:block">
+                        Use these comprehensive guides to understand the fundamentals of  <br />
+                        USDT (TRON) cryptocurrency. Watch easy-to-understand tutorials <br />
+                        and become an advanced user in no time.
                         </div>
-                        <div>
-                            USDT (TRON) cryptocurrency. Watch easy-to-understand tutorials 
-                        </div>
-                        <div>
-                            and become an advanced user in no time.
-                        </div>                       
+                        <div className="sm:hidden justify-center text-center">
+                        Use these comprehensive guides to <br />
+                        understand the fundamentals of <br />
+                        USDT (TRON) cryptocurrency. Watch <br />
+                        easy-to-understand tutorials and <br />
+                        become an advanced user in no time.
+                        </div>                 
                     </div>
                 </div>
                 <div>     
@@ -44,39 +47,39 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="max-w-full flex justify-center">
-            <div className="w-[1000px] h-[215px] flex justify-between mt-[26px]">
-                <div className="w-[463px] h-[70px] flex-shrink-0 flex gap-2">                 
+        <div className="max-w-full flex-shrink-0 md:h-full flex justify-center items-center">
+            <div className="w-full md:w-[1000px] md:h-[215px] flex justify-between flex-col md:flex-row">
+                <div className="w-[463px] md:h-[70px] mt-[60px] px-5 md:px-0 md:mt-[40px] flex gap-2">                 
                     <div 
-                    className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                     style={{ cursor: 'pointer' }}
                     >
-                        <div className="w-[35.957px] h-[44px] flex-shrint-0">
+                        <div className="w-[22.289px] h-[27.274px] md:w-[35.957px] md:h-[44px] flex-shrint-0">
                             <img src={AppStore} alt="appstore"/>
                         </div>                                                                    
                     </div>
 
                     <div 
-                    className="w-[70px] h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                     style={{ cursor: 'pointer' }}
                     >
-                        <div className="w-10 h-11 flex-shrink-0">
+                        <div className="w-[24.795px] h-[27.274px] md:w-10 md:h-11 flex-shrink-0">
                             <img src={PlayStore} alt="playstore"/>
                         </div>                      
                     </div>
 
                     <div 
-                    className="w-[307px] h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                    className="w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
                     onClick={() => setOpenModalApp(true)} 
                     style={{ cursor: 'pointer' }}
                     >                         
-                        <div className="flex justify-center items-center my-[15px] gap-[22px]">
-                            <div>
+                        <div className="flex justify-center items-center my-[8px] md:my-[15px] gap-[22px]">
+                            <div className="w-[24.795px] h-[24.795px] md:w-[40px] md:h-[40px]">
                                 <img src={QRCode} alt="qrcode"/>
                             </div>                   
                             <div 
-                            className="flex w-[210px] h-10 flex-col justify-center flex-shrink-0 text-black"
-                            style={{ fontFamily:"SF-Pro-Display-Medium", fontSize:"16px", fontStyle:"normal", lineHeight:"normal" }}
+                            className="flex w-[120px] h-5 md:w-[210px] md:h-10 flex-col justify-center flex-shrink-0 text-black text-[10px] md:text-[16px]"
+                            style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}
                             >
                                 Show QR to download new version app on your mobile
                             </div>
@@ -86,8 +89,23 @@ const Footer = () => {
                         {/* Content of the modal */}
                     </ModalApp>
                 </div>
+                <div className="flex w-[130px] h-[62px] flex-col justify-center flex-shrink-0 text-left md:text-right pl-5 md:pl-0 mt-[36px] md:mt-[40px] mb-[105.61px] md:mb-0"
+                    style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontSize:"14px", fontStyle:"normal", fontWeight:"510", lineHeight:"normal" }}>
+                        <div>
+                            © 2024 TTPAY
+                        </div>
+                        <div>
+                            ttpay.io
+                        </div>
+                        <div>
+                            All rights reserved.
+                        </div>
+                        <div>
+                            support@ttpay.io
+                        </div>   
+                    </div>
 
-                <div className="flex w-[130px] h-[63px] flex-col justify-center flex-shrink-0"
+                {/* <div className="flex w-[130px] h-[63px] flex-col justify-center flex-shrink-0"
                     style={{ color:"#666", textAlign:"right", fontFamily:"SF-Pro-Display-Regular", fontSize:"14px", fontStyle:"normal", fontWeight:"510", lineHeight:"normal" }}>
                     <div>
                         © 2024 TTPAY
@@ -101,7 +119,7 @@ const Footer = () => {
                     <div>
                         support@ttpay.io
                     </div>                      
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

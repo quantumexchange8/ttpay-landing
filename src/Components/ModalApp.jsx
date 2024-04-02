@@ -11,7 +11,7 @@ export default function ModalApp({ open, onClose, children }) {
             id="modal-app"
             onClick={onClose}
             className={`fixed inset-0 flex justify-center z-50 items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`}>
-            <div onClick={(e) => e.stopPropagation()} className={`w-[500px] h-[800px] bg-white rounded-[50px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
+            <div onClick={(e) => e.stopPropagation()} className={`w-full sm:w-[500px] h-[800px] bg-white rounded-[50px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
                 <div>
                     <div className="relative">
                         <div className="flex justify-center items-center mt-[50px]">

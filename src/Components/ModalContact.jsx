@@ -54,7 +54,7 @@ export default function ModalContact({ open, onClose, children }) {
             id="modal-contact"
             onClick={handleClose} 
             className={`fixed inset-0 flex justify-center items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`} style={{ zIndex: 9999 }}>
-            <div onClick={(e) => e.stopPropagation()} className={`w-[500px] h-[900px] bg-white rounded-[50px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
+            <div onClick={(e) => e.stopPropagation()} className={`w-full sm:w-[500px] h-[900px] bg-white rounded-[50px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
                 <div>
                     <div className="relative">
                         <div className="flex justify-center items-center mt-[50px]">

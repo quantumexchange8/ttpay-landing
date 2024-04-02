@@ -7,7 +7,7 @@ import Footer from './Pages/Footer';
 
 function App() {
   return (
-      <div>
+      <div className="overflow-x-hidden sm:overflow-auto">
           <Topbar />
           <Home />
           <Footer />

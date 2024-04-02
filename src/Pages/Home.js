@@ -33,7 +33,7 @@ const Home = () => {
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
     return (
-        <div className="wrapper min-w-[390px] w-full *:">  
+        <div className="wrapper min-w-xs w-full *:">  
             <div className="max-w-full flex justify-center h-[1100px] md:h-full">
                 <div className="flex flex-col w-[390px] md:flex-row justify-center mb-[200px] md:w-[1000px]">
                     <div className="flex flex-col w-full h-[460px]">
@@ -46,27 +46,10 @@ const Home = () => {
                             </div> */}
                         </div>
                         <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
-                            <div className="hidden sm:block">
-                                Your gateway to digital currencies and beyond. <br />
-                                Trade, transfer funds, and make transactions in <br />
-                                one secure and convenient application.
-                            </div>
-                            <div className="sm:hidden w-[310px] h-[90px]">
-                                Your gateway to digital currencies and beyond. Trade, transfer funds, and make transactions in one secure and convenient application.
+                            <div className="w-full">
+                            Your gateway to digital currencies and beyond. Trade, transfer funds, and make transactions in one secure and convenient application.
                             </div>
                         </div>
-                        {/* <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin"
-                            style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }} >
-                            <div >
-                                Your gateway to digital currencies and beyond. 
-                            </div>
-                            <div>
-                                Trade, transfer funds, and make transactions in 
-                            </div>
-                            <div>
-                                one secure and convenient application.
-                            </div>           
-                        </div> */}
                         <div className="w-[463px] h-[70px] mt-[40px] px-5 md:px-0 md:mt-[20px] flex gap-2">                 
                             <div 
                             className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
@@ -154,7 +137,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Part 2 */}
-            <div className="bg-[#f4efff] w-[393px] h-[306px] md:h-[200px] md:w-full flex justify-center">
+            <div className="bg-[#f4efff] sm:w-full h-[306px] md:h-[200px] md:w-full flex justify-center">
                 <div className="flex-col md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
                     <div className="flex flex-col justify-center w-275 h-90 flex-shrink-0 mt-[65px] md:mt-0">
                         <div className="text-[64px] md:text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
@@ -189,7 +172,6 @@ const Home = () => {
                     </div>
                     
                     <div className="mt-[50px] md:mt-[200px] flex flex-col md:gap-[300px]">
-                        {/* Part1 */}
                         <div className="h-[630px] md:h-[587px] flex-shrink-0 flex flex-col md:flex-row justify-between relative">
                             <div className="flex md:flex-col h-[380px] md:h-full justify-center flex-row">
                                 <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[145px] md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
@@ -258,23 +240,9 @@ const Home = () => {
                                 </div>
                                 <div className="flex w-[390px] md:w-[425px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                        <div className="hidden md:block">
-                                        Build and manage your cryptocurrency <br/>
-                                        from your mobile device. Utilize our crypto- <br/>
-                                        currency wallet payment gateway to <br/>
-                                        establish unbreakable bridges with your <br/>
-                                        business for any transaction.<br/>
-                                        And protect your earnings by trading into <br/>
-                                        USD stablecoins.<br/>
-                                        </div>
-                                        <div className="sm:hidden w-[390px] h-[130px] justify-center text-center">
-                                        Build and manage your cryptocurrency <br/>
-                                        from your mobile device. Utilize our <br/>
-                                        crypto- currency wallet payment gateway <br/>
-                                        to establish unbreakable bridges with <br/>
-                                        your business for any transaction. <br/>
-                                        And protect your earnings by trading <br/>
-                                        into USD stablecoins.
+                                        <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center sm:text-left">
+                                            Build and manage your cryptocurrency from your mobile device. Utilize our crypto- currency wallet payment gateway to establish unbreakable bridges with your business for any transaction.
+                                            And protect your earnings by trading into USD stablecoins.
                                         </div>
                                 </div>
                             </div>
@@ -288,23 +256,8 @@ const Home = () => {
                                 </div>
                                 <div className="flex w-full md:w-[425px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                        <div className="hidden md:block">
-                                        Hold the passcord to your digital assets in a <br/>
-                                        wallet so secure, no one can access it <br/>
-                                        except for you - not even us. Protect your <br/>
-                                        money with passcode and phone biometric <br/>
-                                        security features. Automatically back up all <br/>
-                                        your wallets and restore access with a <br/>
-                                        single custom password.<br/>
-                                        </div>
-                                        <div className="sm:hidden w-[390px] h-[130px] justify-center text-center">
-                                        Hold the passcord to your digital assets <br/>
-                                        in a wallet so secure, no one can access it <br/>
-                                        except for you - not even us. Protect your <br/>
-                                        money with passcode and phone biometric <br/>
-                                        security features. Automatically back up <br/>
-                                        all your wallets and restore access with a <br/>
-                                        single custom password.
+                                        <div className="flex justify-center sm:justify-start px-5 sm:px-0 text-center sm:text-left">
+                                            Hold the passcord to your digital assets in a wallet so secure, no one can access items except for you - not even us. Protect your money with passcode and phone biometric security features. Automatically back up all your wallets and restore access with a single custom password.
                                         </div>
                                 </div>
                             </div>
@@ -353,10 +306,10 @@ const Home = () => {
                         </div>
 
                         {/* Part 3 */}
-                        <div className="h-[560px] md:h-[500px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0">
+                        <div className="h-[560px] md:h-[500px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0 relative">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 mt-[33px] mb-[54px]">
                                 <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
-                                <div className="relative bottom-[100px] right-[55.84px] gap-[5px] md:absolute md:bottom-[115px] md:right-[80px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
+                                <div className="bottom-[280px] right-[90px] gap-[5px] absolute md:bottom-[115px] md:left-[250px] w-[120px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
                                     <div className="w-[34.9px] h-[34.9px] md:w-[50px] md:h-[50px] flex-shrink-0">
                                         <img src={ApprovedWithoutRed} alt="Approved Without Red" className="w-50 h-50 flex-shrink-0"/>
                                     </div>
@@ -402,17 +355,8 @@ const Home = () => {
                                 </div>
                                 <div className="flex w-full md:w-[425px] h-[75px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                    <div className="hidden sm:block">
-                                    ‘Received’ and ‘Sent’ features in the wallets. <br />
-                                    to organize your funds. Add personal notes <br />
-                                    to transactions and get a complete history <br />
-                                    of all your funds.
-                                    </div>
-                                    <div className="sm:hidden justify-center text-center">
-                                    ‘Received’ and ‘Sent’ features in the <br />
-                                    wallets to organize your funds. Add <br />
-                                    personal notes to transactions and <br />
-                                    get a complete history of all your funds.
+                                    <div className="flex justify-center sm:justify-start px-10 sm:px-0 text-center sm:text-left">
+                                        ‘Received’ and ‘Sent’ features in the wallets to organize your funds. Add personal notes to transactions and get a complete history of all your funds.
                                     </div>
                                 </div>
                             </div>
@@ -533,7 +477,18 @@ const Home = () => {
                 </div>
             </div>
 
-            <div 
+            <div className="fixed bottom-6 right-6 animate-bounce" style={{ animationDuration: '1.5s' }}>
+                <div className="w-[50px] h-[50px] flex-shrink-0" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+                    <img src={ScrollUp} alt="icon"/>
+                </div>
+            </div>
+
+            {/* <div className="hidden sm:block fixed bottom-6 right-6 animate-bounce" style={{ animationDuration: '1.5s' }}>
+                <div className="w-[50px] h-[50px] flex-shrink-0" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+                    <img src={ScrollUp} alt="icon"/>
+                </div>
+            </div> */}
+            {/* <div 
             className="fixed bottom-6 right-6 animate-bounce" 
             style={{ animationDuration: '1.5s' }}
             >  
@@ -544,7 +499,19 @@ const Home = () => {
                 >
                     <img src={ScrollUp} alt="icon"/>
                 </div>
-            </div>
+            </div> */}
+            {/* <div 
+            className="fixed bottom-12 right-24 animate-bounce" 
+            style={{ animationDuration: '1.5s' }}
+            >  
+                <div 
+                className="w-[50px] h-[50px] flex-shrink-0" 
+                onClick={scrollToTop}
+                style={{ cursor: 'pointer' }}
+                >
+                    <img src={ScrollUp} alt="icon"/>
+                </div>
+            </div> */}
         </div>
     );
   };
