@@ -160,13 +160,9 @@ const Home = () => {
                     <div className="flex justify-center">
                         <div className="flex w-[390px] md:w-[800px] h-[150px] flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[200px] text-black text-center text-[32px] md:text-[48px]">
                             <div className="hidden md:block w-[700px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                                <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center sm:text-left">
                                 Every feature you need for business freedom in one digital wallet
-                            </div>
-                            <div className="sm:hidden" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                Every feature you <br />
-                                need for business <br />
-                                freedom in one digital <br />
-                                wallet
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -456,19 +452,8 @@ const Home = () => {
                                 </div>
                                 <div className="flex w-full md:w-[425px] h-[93px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                    <div className="hidden sm:block">
-                                    Withdrawal and transfer cryptocurrencies <br />
-                                    anytime, anywhere - no questions asked. <br />
-                                    Take advantage of fully-customizable fees <br />
-                                    for sending. Link unlimited wallets to <br />
-                                    support your privacy.
-                                    </div>
-                                    <div className="sm:hidden justify-center text-center">
-                                    Withdrawal and transfer cryptocurrencies <br />
-                                    anytime, anywhere - no questions asked <br />
-                                    Take advantage of fully-customizable <br />
-                                    fees for sending. Link unlimited wallets <br />
-                                    to support your privacy.
+                                    <div className="flex justify-center sm:justify-start px-12 sm:px-0 text-center sm:text-left">
+                                    Withdrawal and transfer cryptocurrencies anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Link unlimited wallets to support your privacy.
                                     </div>
                                 </div>
                             </div>

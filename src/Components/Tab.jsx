@@ -7,6 +7,7 @@ import AppStoreLeafGrey from '../assets/images/appstore-leaf-grey.svg';
 import PlayStore from '../assets/images/playstore.svg';
 import AppStoreCode from '../assets/images/appstore-code.svg';
 import PlayStoreCode from '../assets/images/playstore-code.svg';
+import DownloadPhone from '../assets/images/download-phone.svg'
 
 
 function classNames(...classes) {
@@ -19,32 +20,32 @@ export default function Example() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="w-[350px] h-[66px] flex-shrink-0 rounded-[10px] bg-[#CCCCCC] mx-[75px] mt-[50px] flex flex-row justify-center items-center">
+        <Tab.List className="w-[245px] h-[46.2px] md:w-[350px] md:h-[66px] flex-shrink-0 rounded-[10px] bg-[#CCCCCC] mx-[52.5px] mt-[41px] md:mx-[75px] md:mt-[50px] flex flex-row justify-center items-center">
             <Tab key="ios" className={({ selected }) =>
                 classNames(
-                    'w-[171px] h-[58px] flex-shrink-0 rounded-[10px]','ring-white/60',
+                    'w-[119.7px] h-[40.2px] md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]','ring-white/60',
                     selected ? 'bg-white text-black' : 'text-[#888]'
                 )
                 } onClick={() => setSelectedTab('ios')} // Set selectedTab to 'ios' when clicked
             >
-                <div className="flex flex-row justify-center items-center gap-[10px]">
+                <div className="flex flex-row justify-center items-center ml-[9px] md:ml-0">
                     {selectedTab === 'ios' ? (
                         <div className="flex flex-col justify-center items-center">
                             <div className="ml-1">
-                                <img src={AppStoreLeafBlack} alt="ios" />
+                                <img className="w-[5px] h-[6px] md:w-full md:h-full" src={AppStoreLeafBlack} alt="ios" />
                             </div>
-                            <img src={AppStoreBlack} alt="ios" />
+                            <img className="w-[19px] h-[17px] md:w-full md:h-full" src={AppStoreBlack} alt="ios" />
                         </div>
                     ) : (
                         <div className="flex flex-col justify-center items-center">
                             <div className="ml-1">
-                                <img src={AppStoreLeafGrey} alt="ios" />
+                                <img className="w-[5px] h-[6px] md:w-full md:h-full" src={AppStoreLeafGrey} alt="ios" />
                             </div>
-                            <img src={AppStoreGrey} alt="ios" />
+                            <img className="w-[19px] h-[17px] md:w-full md:h-full" src={AppStoreGrey} alt="ios" />
                         </div>
                     )}
                     <div
-                        className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[16px]"
+                        className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[10px] font-bold md:font-normal md:text-[16px]"
                         style={{ fontFamily: 'SF-Pro-Display-Bold', fontStyle: 'normal', lineHeight: 'normal' }}
                     >
                         App Store
@@ -56,16 +57,16 @@ export default function Example() {
                 key="android"
                 className={({ selected }) =>
                 classNames(
-                    'w-[171px] h-[58px] flex-shrink-0 rounded-[10px]',
+                    'w-[119.7px] h-[44.2px] md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]',
                     'ring-white/60',
                     selected ? 'bg-white text-black' : 'text-[#888]'
                 )
                 }
                 onClick={() => setSelectedTab('android')} // Set selectedTab to 'android' when clicked
             >
-                <div className="flex flex-row justify-center items-center gap-[10px]">
-                    <img className="w-[30px]" src={PlayStore} alt="android"/>  
-                    <div className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[16px]"
+                <div className="flex flex-row justify-center items-center md:gap-[10px] ml-[9px] md:ml-0">
+                    <img className="w-[20px] md:w-[30px]" src={PlayStore} alt="android"/>  
+                    <div className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[10px] md:text-[16px]"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             Google Play
                     </div>
@@ -73,30 +74,39 @@ export default function Example() {
                 
             </Tab>
         </Tab.List>
-        <Tab.Panels className="mt-2">
-            <Tab.Panel
-                key="ios"
-                className={classNames(
-                'bg-white',
-                'ring-white/60 '
-                )}
-            >
-                <div className="w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px]">
-                <img src={AppStoreCode} alt="ios"/>
-                </div>
-            </Tab.Panel>
-            <Tab.Panel
-                key="android"
-                className={classNames(
-                ' bg-white',
-                'ring-white/60'
-                )}
-            >
-                <div className="w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px]">
-                <img src={PlayStoreCode} alt="android"/>
-                </div>
-            </Tab.Panel>
-        </Tab.Panels>
+        <div className="hidden sm:block">
+            <Tab.Panels className="mt-[8px]">
+                <Tab.Panel
+                    key="ios"
+                    className={classNames(
+                    'bg-white',
+                    'ring-white/60 '
+                    )}
+                >
+                    <div className="w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px]">
+                    <img src={AppStoreCode} alt="ios"/>
+                    </div>
+                </Tab.Panel>
+                <Tab.Panel
+                    key="android"
+                    className={classNames(
+                    ' bg-white',
+                    'ring-white/60'
+                    )}
+                >
+                    <div className="w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px]">
+                    <img src={PlayStoreCode} alt="android"/>
+                    </div>
+                </Tab.Panel>
+            </Tab.Panels>
+        </div>
+        <div className="sm:hidden">
+            <div className="flex w-full justify-center mt-[50px]">
+            {/* w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px] */}
+                <img className="w-[60px] h-[50.4px]" src={DownloadPhone} alt="Download Phone Icon" style={{ cursor: 'pointer' }}/>
+            </div>
+        </div>
+        
       </Tab.Group>
     </div>
   );
