@@ -160,7 +160,7 @@ const Home = () => {
                             <span className='md:w-[800px]'>{t('part3ContentBoldTitle')}</span>
                         </div>
 
-                        <div className="h-[630px] md:h-[587px] flex-shrink-0 flex flex-col md:flex-row justify-between relative">
+                        <div className="h-[630px] md:h-[587px] flex-shrink-0 flex flex-col md:flex-row justify-between relative md:gap-[75px]">
                             <div className="flex md:flex-col h-[380px] md:h-full justify-center flex-row">
                                 <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[145px] md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex gap-3 h-[50px]">
@@ -222,12 +222,12 @@ const Home = () => {
                                 </div>
                             </div>
                             {/* Part 3-1-text */}
-                            <div className="flex flex-col gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
-                                <div className="flex w-[300px] md:w-[300px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0 font-bold" 
+                            <div className="flex flex-col items-center gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
+                                <div className="flex w-[300px] h-[70px] md:w-full md:h-auto flex-col justify-center text-black text-[24px] text-center md:text-start md:text-[36px] md:ml-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                     {t('part3ContentBold')}
                                 </div>
-                                <div className="flex w-[390px] md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
+                                <div className="flex w-[390px] md:w-full h-[130px] md:h-auto flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center sm:text-left">
                                             {t('part3ContentNormal')}
@@ -236,13 +236,13 @@ const Home = () => {
                             </div>
                         </div>
                         {/* Part 2*/}
-                        <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0">
-                            <div className="flex flex-col mt-[36px] md:gap-[30px] md:mt-[140px] text-black">
+                        <div className="h-full md:h-auto flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0">
+                            <div className="flex flex-col justify-center mt-[36px] md:gap-[30px] md:mt-0 text-black">
                                 <div className="flex w-[300px] md:w-[400px] h-[30px] md:h-[45px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                         {t('part4ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
+                                <div className="flex w-full h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] font-medium md:w-[370px] md:text-[20px] md:h-auto"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         <div className="flex justify-center sm:justify-start px-5 sm:px-0 text-center sm:text-left">
                                             {t('part4ContentNormal')}
@@ -294,8 +294,8 @@ const Home = () => {
                         </div>
 
                         {/* Part 3 */}
-                        <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0 relative">
-                            <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
+                        <div className="h-full flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0 relative md:h-auto">
+                            <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0">
                                 <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
                                 <div className="bottom-[280px] right-[90px] gap-[5px] absolute md:bottom-[115px] md:left-[250px] w-[120px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
                                     <div className="w-[34.9px] h-[34.9px] md:w-[50px] md:h-[50px] flex-shrink-0">
@@ -309,7 +309,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col text-black mt-[36px] md:mt-0">
+                            <div className="flex flex-col text-black mt-[36px] md:mt-0 md:gap-[30px]">
                             {/* gap-[30px] */}
                                 <div className="flex w-[390px] h-[60px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 px-9 md:px-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
@@ -324,7 +324,7 @@ const Home = () => {
 
                         {/* Part4 */}
                         <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0 items-center">
-                            <div className="flex flex-col text-black mt-[36px] md:mt-0">
+                            <div className="flex flex-col text-black mt-[36px] md:mt-0 gap-[30px]">
                             
                                 <div className="flex w-[390px] h-[30px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
