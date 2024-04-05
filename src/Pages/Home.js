@@ -36,24 +36,22 @@ const Home = () => {
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
     return (
-        <div className="wrapper min-w-xs h-[4970px] md:h-full w-full *:">  
-            <div className="max-w-full flex justify-center md:h-full mb-[99.61px] md:mb-0">
-                <div className="flex flex-col h-full w-[390px] md:flex-row justify-center md:mb-[200px] md:w-[1000px]">
-                    <div className="flex flex-col w-full h-[480px] md:h-full">
-                        <div className="flex w-full md:w-[420px] flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[150px] text-black text-[28px] md:text-[40px]">
-                            <div className="w-[287px] md:w-[420px] md:h-[280px] px-5 md:px-0 font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+        <div className="wrapper min-w-xs md:h-full w-full">
+
+            <div className="flex justify-center mt-[110px] md:mt-[220px]">
+                <div className="flex flex-col gap-9 h-auto w-[390px] mb-[100px] md:flex-row justify-center md:mb-[200px] md:w-[1000px] md:gap-[77px]">
+                    <div className="flex flex-col justify-center gap-6 md:gap-[30px] w-full">
+                        <div className="flex w-full md:w-[420px] flex-col justify-center text-black text-[28px] md:text-[40px]">
+                            <div className="w-[287px] md:w-[420px] px-5 md:px-0 font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                 {t('part1ContentBold.part1')} <span className="text-[#0038FF]"> {t('part1ContentBold.part2')}</span>
                             </div>
-                            {/* <div style={{ color:"#0038FF", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                trusted digital wallet.
-                            </div> */}
                         </div>
-                        <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
+                        <div className="flex w-full h-auto flex-col justify-center px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
                             <div className="w-full font-normal">
                             {t('part1ContentNormal')}
                             </div>
                         </div>
-                        <div className="w-[463px] h-[70px] mt-[40px] px-5 md:px-0 md:mt-[20px] flex gap-2">                 
+                        <div className="w-full h-auto px-5 md:px-0 flex gap-2">                 
                             <div 
                             className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                             style={{ cursor: 'pointer' }}
@@ -68,16 +66,16 @@ const Home = () => {
                             >
                                 <div className="w-[24.795px] h-[27.274px] md:w-10 md:h-11 flex-shrink-0">
                                     <img src={PlayStore} alt="playstore"/>
-                                </div>                      
+                                </div>
                             </div>
                             <div 
-                            className="w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                            className="flex py-[9px] px-[10px] md:py-[15px] md:px-4 w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
                             // hover:animate-bounce
                             onClick={() => setOpenModalApp(true)} 
                             style={{ cursor: 'pointer' }}
                             >      
-                                <div className="flex justify-center items-center my-[8px] md:my-[15px] gap-[22px]">
-                                    <div className="md:w-[40px] md:h-[40px] w-[24.795px] h-[24.795px]">
+                                <div className="flex justify-center items-center gap-3 md:gap-[22px] w-full">
+                                    <div className="w-6 h-6 md:w-[40px] md:h-[40px]">
                                         <img src={QRCode} alt="qrcode"/>
                                     </div>                   
                                     <div className="flex w-[120px] h-5 md:w-[210px] md:h-10 flex-col justify-center flex-shrink-0 text-black text-[10px] md:text-[16px]"
@@ -92,57 +90,51 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="mt-[36px] md:mt-[150px]">
-                        <div className="flex flex-col  md:gap-[20px] gap-[15.17px] px-5 md:px-0">
-                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo11} title="Home Video 1-1"></video>
-                                </div>
-    
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo21} title="Home Video 2-1"></video>
-                                </div>
+                    
+                    <div className="flex flex-wrap gap-[15px] justify-center w-full md:flex md:flex-wrap md:gap-[20px] md:px-0">
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo11} title="Home Video 1-1"></video>
+                        </div>
 
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo31} title="Home Video 3-1"></video>
-                                </div>
-                            </div>
-    
-                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo12} title="Home Video 1-2"></video>
-                                </div>
-    
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo22} title="Home Video 2-2"></video>
-                                </div>
-    
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo32} title="Home Video 3-2"></video>
-                                </div>
-                            </div>
-    
-                            <div className="flex flex-row md:gap-[20px] gap-[15.17px]">
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo13} title="Home Video 1-3"></video>
-                                </div>
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo21} title="Home Video 2-1"></video>
+                        </div>
 
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo23} title="Home Video 2-3"></video>
-                                </div>
-    
-                                <div className="w-[106.217px] h-[106.217px] md:w-[140px] md:h-[140px] flex-shrink-0">
-                                    <video autoPlay loop muted className="rounded-[10px] shadow-md object-cover w-full h-full" src={HomeVideo33} title="Home Video 3-3"></video>
-                                </div>
-                            </div>
-                        </div>  
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo31} title="Home Video 3-1"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo12} title="Home Video 1-2"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo22} title="Home Video 2-2"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo32} title="Home Video 3-2"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo13} title="Home Video 1-3"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo23} title="Home Video 2-3"></video>
+                        </div>
+
+                        <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
+                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo33} title="Home Video 3-3"></video>
+                        </div>
                     </div>
                 </div>
             </div>
+
             {/* Part 2 */}
             <div className="bg-[#f4efff] sm:w-full h-[306px] md:h-[200px] md:w-full flex justify-center">
-                <div className="flex-col md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
-                    <div className="flex flex-col justify-center w-275 h-90 flex-shrink-0 mt-[65px] md:mt-0">
+                <div className="flex flex-col gap-8 justify-center items-center md:w-[1000px] md:flex-row md:justify-between">
+                    <div className="flex flex-col items-center justify-center md:items-start">
                         <div className="text-[64px] md:text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             386,370
                         </div>
@@ -154,36 +146,23 @@ const Home = () => {
                         <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] font-bold"
                             style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>
                                 {t('part2Button')}
-                            </button>
+                        </button>
                     </div>
                     <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
                 </div>
             </div>
             {/* Part 3 */}
             <div className="max-w-full flex justify-center">
-                <div className="w-[390px] md:w-[1000px] mb-[200px]">
-                    <div className="flex justify-center">
-                        <div className="flex w-[390px] md:w-[800px] h-[150px] md:h-full flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[200px] text-black text-center text-[32px] md:text-[48px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                            {/* <div className="" > */}
-                                <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center md:px-5 font-bold">
-                                    {t('part3ContentBoldTitle')}
-                                </div>
-                                
-                                {/* Part 3-1-text */}
-                            {/* <div className="flex flex-col gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
-                                <div className="flex w-[300px] md:w-[300px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0" 
-                                    style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                    Deposit, Receive, Transfer and Withdrawal
-                                </div> */}
-                                
-                            {/* </div> */}
-                        </div>
-                    </div>
-                    
+                <div className="w-[390px] mb-0 md:w-[1000px] md:mb-[200px]">
                     <div className="mt-[50px] md:mt-[200px] flex flex-col md:gap-[300px]">
+
+                        <div className="flex justify-center text-[32px] mb-12 md:text-5xl text-center w-full px-[22px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                            <span className='md:w-[800px]'>{t('part3ContentBoldTitle')}</span>
+                        </div>
+
                         <div className="h-[630px] md:h-[587px] flex-shrink-0 flex flex-col md:flex-row justify-between relative">
                             <div className="flex md:flex-col h-[380px] md:h-full justify-center flex-row">
-                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[145px] md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute top-0 left-[145px] md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex gap-3 h-[50px]">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -202,7 +181,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[340px] left-[175px] md:bottom-[130px] md:left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[340px] left-[175px] md:bottom-[130px] md:left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex gap-3 h-[50px]">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -220,7 +199,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[270px] md:bottom-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="w-[194.61px] h-[51.896px] md:w-[300px] md:h-[80px] flex-shrink-0 rounded-[20px] bg-[#dddddde6] absolute bottom-[270px] md:bottom-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex gap-3 h-[50px]">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center flex-shrink-0 ml-[16.87px] mt-[9.73px] md:mt-[15px] md:ml-[26px]">
                                             <img src={Approved} alt="icon"/>
@@ -239,7 +218,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={WomanCreditCard} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" src={WomanCreditCard} title="Home Video 1-1"></video>
                                 </div>
                             </div>
                             {/* Part 3-1-text */}
@@ -469,36 +448,6 @@ const Home = () => {
                     <img src={ScrollUp} alt="icon"/>
                 </div>
             </div>
-
-            {/* <div className="hidden sm:block fixed bottom-6 right-6 animate-bounce" style={{ animationDuration: '1.5s' }}>
-                <div className="w-[50px] h-[50px] flex-shrink-0" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
-                    <img src={ScrollUp} alt="icon"/>
-                </div>
-            </div> */}
-            {/* <div 
-            className="fixed bottom-6 right-6 animate-bounce" 
-            style={{ animationDuration: '1.5s' }}
-            >  
-                <div 
-                className="w-[50px] h-[50px] flex-shrink-0" 
-                onClick={scrollToTop}
-                style={{ cursor: 'pointer' }}
-                >
-                    <img src={ScrollUp} alt="icon"/>
-                </div>
-            </div> */}
-            {/* <div 
-            className="fixed bottom-12 right-24 animate-bounce" 
-            style={{ animationDuration: '1.5s' }}
-            >  
-                <div 
-                className="w-[50px] h-[50px] flex-shrink-0" 
-                onClick={scrollToTop}
-                style={{ cursor: 'pointer' }}
-                >
-                    <img src={ScrollUp} alt="icon"/>
-                </div>
-            </div> */}
         </div>
     );
   };
