@@ -78,7 +78,7 @@ const Topbar = () => {
                                 </div>
                                 <div className="hidden sm:block">
                                     <button 
-                                        className="w-[127px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px]"
+                                        className="w-[127px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] font-bold"
                                         onClick={() => setOpenModalApp(true)}
                                         style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal" }}
                                     >

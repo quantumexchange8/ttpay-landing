@@ -31,26 +31,26 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-    const { t, i18n, Trans } = useTranslation();
+    const { t } = useTranslation();
 
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
     return (
         <div className="wrapper min-w-xs h-[4970px] md:h-full w-full *:">  
             <div className="max-w-full flex justify-center md:h-full mb-[99.61px] md:mb-0">
-                <div className="flex flex-col w-[390px] md:flex-row justify-center md:mb-[200px] md:w-[1000px]">
-                    <div className="flex flex-col w-full h-[480px] md:h-[460px]">
+                <div className="flex flex-col h-full w-[390px] md:flex-row justify-center md:mb-[200px] md:w-[1000px]">
+                    <div className="flex flex-col w-full h-[480px] md:h-full">
                         <div className="flex w-full md:w-[420px] flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[150px] text-black text-[28px] md:text-[40px]">
                             <div className="w-[287px] md:w-[420px] md:h-[280px] px-5 md:px-0 font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                {t('concernsAboutCrypto.part1')} <span className="text-[#0038FF]"> {t('concernsAboutCrypto.part2')}</span>
+                                {t('part1ContentBold.part1')} <span className="text-[#0038FF]"> {t('part1ContentBold.part2')}</span>
                             </div>
                             {/* <div style={{ color:"#0038FF", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                 trusted digital wallet.
                             </div> */}
                         </div>
                         <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
-                            <div className="w-full">
-                            Your gateway to digital currencies and beyond. Trade, transfer funds, and make transactions in one secure and convenient application.
+                            <div className="w-full font-normal">
+                            {t('part1ContentNormal')}
                             </div>
                         </div>
                         <div className="w-[463px] h-[70px] mt-[40px] px-5 md:px-0 md:mt-[20px] flex gap-2">                 
@@ -146,13 +146,15 @@ const Home = () => {
                         <div className="text-[64px] md:text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             386,370
                         </div>
-                        <div className="text-[32px] md:text-[40px]" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                            Merchants created
+                        <div className="text-[32px] md:text-[40px] font-bold text-center md:text-start" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", lineHeight:"normal" }}>
+                            {t('part2ContentNormal')}
                         </div>
                     </div>
                     <div onClick={() => setOpenModalContact(true)}>
-                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]"
-                            style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>Create yours now</button>
+                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] font-bold"
+                            style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>
+                                {t('part2Button')}
+                            </button>
                     </div>
                     <ModalContact open={openModalContact} onClose={() => setOpenModalContact(false)}></ModalContact>
                 </div>
@@ -163,8 +165,8 @@ const Home = () => {
                     <div className="flex justify-center">
                         <div className="flex w-[390px] md:w-[800px] h-[150px] md:h-full flex-col justify-center flex-shrink-0 mt-[100px] md:mt-[200px] text-black text-center text-[32px] md:text-[48px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             {/* <div className="" > */}
-                                <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center md:px-5">
-                                Every feature you need for business freedom in one digital wallet
+                                <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center md:px-5 font-bold">
+                                    {t('part3ContentBoldTitle')}
                                 </div>
                                 
                                 {/* Part 3-1-text */}
@@ -187,13 +189,14 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
-                                                style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Received approved
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
+                                                style={{ fontFamily:"SF-Pro-Display-Semibold", lineHeight:"normal" }}>
+                                                    {t('part3Notif1')}
+                                                
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
-                                                style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                                $3,488.00 USDT for TRON
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px] font-medium"
+                                                style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", lineHeight:"normal" }}>
+                                                    $3,488.00 USDT for TRON
                                             </div>
                                         </div>
                                     </div>
@@ -205,11 +208,11 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Received approved
+                                                {t('part3Notif1')}
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px] font-medium"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                                 $5,000.00 USDT for TRON
                                             </div>
@@ -223,11 +226,11 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
-                                                style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Sent approved
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
+                                                style={{ fontFamily:"SF-Pro-Display-Semibold", lineHeight:"normal" }}>
+                                                    {t('part3Notif2')}
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px] font-medium"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                                 - $658.00 USDT for TRON
                                             </div>
@@ -241,15 +244,14 @@ const Home = () => {
                             </div>
                             {/* Part 3-1-text */}
                             <div className="flex flex-col gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
-                                <div className="flex w-[300px] md:w-[300px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0" 
+                                <div className="flex w-[300px] md:w-[300px] h-[70px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                    Deposit, Receive, Transfer and Withdrawal
+                                    {t('part3ContentBold')}
                                 </div>
-                                <div className="flex w-[390px] md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
+                                <div className="flex w-[390px] md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center sm:text-left">
-                                            Build and manage your cryptocurrency from your mobile device. Utilize our crypto- currency wallet payment gateway to establish unbreakable bridges with your business for any transaction.
-                                            And protect your earnings by trading into USD stablecoins.
+                                            {t('part3ContentNormal')}
                                         </div>
                                 </div>
                             </div>
@@ -257,14 +259,14 @@ const Home = () => {
                         {/* Part 2*/}
                         <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0">
                             <div className="flex flex-col mt-[36px] md:gap-[30px] md:mt-[140px] text-black">
-                                <div className="flex w-[300px] md:w-[400px] h-[30px] md:h-[45px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0" 
+                                <div className="flex w-[300px] md:w-[400px] h-[30px] md:h-[45px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                    Security for your wallet
+                                        {t('part4ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
+                                <div className="flex w-full md:w-[370px] h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         <div className="flex justify-center sm:justify-start px-5 sm:px-0 text-center sm:text-left">
-                                            Hold the passcord to your digital assets in a wallet so secure, no one can access items except for you - not even us. Protect your money with passcode and phone biometric security features. Automatically back up all your wallets and restore access with a single custom password.
+                                            {t('part4ContentNormal')}
                                         </div>
                                 </div>
                             </div>
@@ -276,13 +278,13 @@ const Home = () => {
                                             <img src={Google} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Backup Successful
+                                                    {t('part4Notif1')}
                                             </div>
                                             <div className="flex w-[136.11px] h-[13.96px] md:w-[180px] md:h-4 flex-col justify-center flex-shrink-0 text-[7.678px] md:text-[11px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Passcode have been encrypted and backed up to Google Drive.
+                                                    {t('part4Notif2')}
                                             </div>
                                         </div>
                                     </div>
@@ -294,13 +296,13 @@ const Home = () => {
                                             <img src={Drive} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Backup Successful
+                                                    {t('part4Notif1')}
                                             </div>
                                             <div className="flex w-[136.11px] h-[13.96px] md:w-[180px] md:h-4 flex-col justify-center flex-shrink-0 text-[7.678px] md:text-[11px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                                Passcode have been encrypted and backed up to Google Drive.
+                                                    {t('part4Notif2')}
                                             </div>
                                         </div>
                                     </div>
@@ -330,24 +332,13 @@ const Home = () => {
                             </div>
                             <div className="flex flex-col text-black mt-[36px] md:mt-0">
                             {/* gap-[30px] */}
-                                <div className="flex w-[390px] h-[60px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0" 
+                                <div className="flex w-[390px] h-[60px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 px-9 md:px-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                        <div className="hidden md:block">
-                                        A trusted gateway to <br/>
-                                        the world of TRON <br/>
-                                        (USDT)
-                                        </div>
-                                        <div className="sm:hidden justify-center text-center">
-                                        A trusted gateway to the <br/>
-                                        world of TRON (USDT) 
-                                        </div>
+                                        {t('part5ContentBold')}
                                     </div>
-                                <div className="flex w-[390px] h-[75px] md:w-[425px] md:h-[100px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] text-center md:text-start"
+                                <div className="flex w-[390px] h-[75px] md:w-[425px] md:h-[100px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] text-center md:text-start px-9 md:px-0 font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                        Deposit, withdrawal, transfer, and receive -  <br/>
-                                        the most widely used TRC-20 tokens. Trade <br/>
-                                        using decentralized cryptocurrency wallets, <br/>
-                                        participate in digital markets, and more.
+                                        {t('part5ContentNormal')}
                                 </div>
                             </div>
                         </div>
@@ -356,14 +347,14 @@ const Home = () => {
                         <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0 items-center">
                             <div className="flex flex-col text-black mt-[36px] md:mt-0">
                             
-                                <div className="flex w-[390px] h-[30px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0" 
+                                <div className="flex w-[390px] h-[30px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                    Manage your transactions
+                                    {t('part6ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[380px] h-[75px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
+                                <div className="flex w-full md:w-[380px] h-[75px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                     <div className="flex justify-center sm:justify-start px-10 sm:px-0 text-center sm:text-left">
-                                        ‘Received’ and ‘Sent’ features in the wallets to organize your funds. Add personal notes to transactions and get a complete history of all your funds.
+                                        {t('part6ContentNormal')}
                                     </div>
                                 </div>
                             </div>
@@ -376,29 +367,29 @@ const Home = () => {
                                             </div>
                                             <div className="flex flex-col gap-[4px] md:gap-[12px]">
                                                 <div className="flex flex-col gap-[4.19px] md:gap-[6px]">
-                                                    <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
+                                                    <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
                                                         style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                        Received
+                                                        {t('part6Notif1')}
                                                     </div>
-                                                    <div className="flex w-[60px] h-[10px] flex-col justify-center flex-shrink-0 text-[8.376px] md:text-[12px]"
+                                                    <div className="flex w-[60px] h-[10px] flex-col justify-center flex-shrink-0 text-[8.376px] md:text-[12px] font-normal"
                                                         style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontStyle:"normal",lineHeight:"normal" }}>
                                                         23:27pm
                                                     </div>
                                                 </div>
 
-                                                <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-[9.772px] md:text-[14px]"
+                                                <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-[9.772px] md:text-[14px] font-medium"
                                                     style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                                    Merchant name
+                                                    {t('part6Notif2')}
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col items-end gap-[6px] w-[90px]">
-                                            <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-right text-[11.168px] md:text-[16px]"
+                                            <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-right text-[11.168px] md:text-[16px] font-semibold"
                                                 style={{ color:"#34A853", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 +$65,294.22
                                             </div>
-                                            <div className="flex w-9 h-[10px] flex-col justify-center flex-shrink-0 text-right text-[8.376px] md:text-[12px]" 
+                                            <div className="flex w-9 h-[10px] flex-col justify-center flex-shrink-0 text-right text-[8.376px] md:text-[12px] font-normal" 
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontStyle:"normal", lineHeight:"normal" }}>
                                                 USDT
                                             </div>
@@ -414,29 +405,29 @@ const Home = () => {
                                             </div>
                                             <div className="flex flex-col gap-[4px] md:gap-[12px]">
                                                 <div className="flex flex-col gap-[4.19px] md:gap-[6px]">
-                                                    <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px]"
+                                                    <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-semibold"
                                                         style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
-                                                        Sent
+                                                        {t('part6Notif3')}
                                                     </div>
-                                                    <div className="flex w-[60px] h-[10px] flex-col justify-center flex-shrink-0 text-[8.376px] md:text-[12px]"
+                                                    <div className="flex w-[60px] h-[10px] flex-col justify-center flex-shrink-0 text-[8.376px] md:text-[12px] font-normal"
                                                         style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontStyle:"normal", lineHeight:"normal" }}>
                                                         23:27pm
                                                     </div>
                                                 </div>
 
-                                                <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-[9.772px] md:text-[14px]"
+                                                <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-[9.772px] md:text-[14px] font-medium"
                                                     style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                                    Merchant name
+                                                    {t('part6Notif2')}
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col items-end gap-[6px]">
-                                            <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-right text-[11.168px] md:text-[16px]"
+                                            <div className="flex w-[110px] h-3 flex-col justify-center flex-shrink-0 text-right text-[11.168px] md:text-[16px] font-bold"
                                                 style={{ color:"#4285F4", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 -$3,173.98
                                             </div>
-                                            <div className="flex w-9 h-[10px] flex-col justify-center flex-shrink-0 text-right text-[8.376px] md:text-[12px]" 
+                                            <div className="flex w-9 h-[10px] flex-col justify-center flex-shrink-0 text-right text-[8.376px] md:text-[12px] font-normal" 
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontStyle:"normal", lineHeight:"normal" }}>
                                                 USDT
                                             </div>
@@ -457,14 +448,14 @@ const Home = () => {
                                 <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1"></video>
                             </div>
                             <div className="flex flex-col md:gap-[30px] text-black mt-[36px] md:mt-0">
-                                <div className="flex w-[390px] h-[30px] md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0" 
+                                <div className="flex w-[390px] h-[30px] md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                                    Move money freely
+                                    {t('part7ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[380px] h-[93px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px]"
+                                <div className="flex w-full md:w-[380px] h-[93px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                     <div className="flex justify-center sm:justify-start px-12 sm:px-0 text-center sm:text-left">
-                                    Withdrawal and transfer cryptocurrencies anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Link unlimited wallets to support your privacy.
+                                        {t('part7ContentNormal')}
                                     </div>
                                 </div>
                             </div>

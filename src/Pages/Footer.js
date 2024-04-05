@@ -6,8 +6,10 @@ import QRCode from '../assets/images/qrcode.svg';
 import ModalApp from '../Components/ModalApp';
 import { useState } from 'react';
 import ModalContact from '../Components/ModalContact';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
   return (
@@ -15,31 +17,21 @@ const Footer = () => {
         <div className="bg-[#f4efff] sm:w-full h-[442px] md:h-[200px] md:w-full flex justify-center">
             <div className="flex-col w-full md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
                 <div className="flex flex-col text-black md:mt-[20px]">
-                    <div className="flex w-[349px] h-[90px] md:w-[459px] md:h-[30px] flex-col justify-center flex-shrink-0 text-[40px] text-center mt-[66px] md:mt-0"
+                    <div className="flex w-full h-[90px] md:w-[459px] md:h-[30px] flex-col justify-center flex-shrink-0 text-[40px] md:text-start text-center mt-[66px] md:mt-0 px-5 md:px-0 font-bold"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"40px", fontStyle:"normal", lineHeight:"normal" }}>
-                        Get the support you need
+                            {t('part8ContentBoldTitle')}
                     </div>
 
-                    <div className="flex w-full h-[95px] md:w-[660px] md:h-[66px] mt-[30px] md:mt-[20px] flex-col justify-center flex-shrink-0 text-[16px] md:text-[20px]"
-                        style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                        <div className="hidden sm:block">
-                        Use these comprehensive guides to understand the fundamentals of  <br />
-                        USDT (TRON) cryptocurrency. Watch easy-to-understand tutorials <br />
-                        and become an advanced user in no time.
+                    <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
+                        <div className="flex justify-center sm:justify-start px-12 sm:px-0 text-center sm:text-left">
+                        {t('part8ContentNormal')}
                         </div>
-                        <div className="sm:hidden justify-center text-center">
-                        Use these comprehensive guides to <br />
-                        understand the fundamentals of <br />
-                        USDT (TRON) cryptocurrency. Watch <br />
-                        easy-to-understand tutorials and <br />
-                        become an advanced user in no time.
-                        </div>                 
                     </div>
                 </div>
                 <div>     
-                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white flex items-center justify-center gap-4" onClick={() => setOpenModalContact(true)} style={{ cursor: 'pointer' }}>
+                    <div className="w-[225px] h-[50px] flex-shrink-0 rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white flex items-center justify-center gap-4 font-bold" onClick={() => setOpenModalContact(true)} style={{ cursor: 'pointer' }}>
                         <div style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"20px", fontStyle:"normal", lineHeight: "normal",}}>
-                            Start from here 
+                            {t('part8Button')}
                         </div>
                         <img src={Arrow} alt="icon"/>
                     </div>
@@ -89,7 +81,7 @@ const Footer = () => {
                         {/* Content of the modal */}
                     </ModalApp>
                 </div>
-                <div className="flex w-[130px] h-[62px] flex-col justify-center flex-shrink-0 text-left md:text-right pl-5 md:pl-0 mt-[36px] md:mt-[40px] mb-[105.61px] md:mb-0"
+                <div className="flex w-[130px] h-[62px] flex-col justify-center flex-shrink-0 text-left md:text-right pl-5 md:pl-0 mt-[36px] md:mt-[40px] mb-[105.61px] md:mb-0 font-medium"
                     style={{ color:"#666", fontFamily:"SF-Pro-Display-Regular", fontSize:"14px", fontStyle:"normal", fontWeight:"510", lineHeight:"normal" }}>
                         <div>
                             © 2024 TTPAY

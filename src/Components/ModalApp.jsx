@@ -2,8 +2,11 @@
 import Icon from '../assets/images/icon.svg';
 import Close from '../assets/images/close.svg';
 import TabComponent from '../Components/Tab';
+import { useTranslation } from 'react-i18next';
 
 export default function ModalApp({ open, onClose, children }) {
+
+    const { t, i18n } = useTranslation();
 
     return (
         //backdrop 
@@ -25,14 +28,14 @@ export default function ModalApp({ open, onClose, children }) {
                         </div>
                     </div>
                     
-                    <div className="flex w-[160px] h-[48px] md:w-[250px] md:h-[80px] flex-col justify-center flex-shrink-0 text-black text-center text-[20px] mx-[95px] mt-[20px] md:text-[36px] md:mx-[125px] md:mt-[30px]"
+                    <div className="flex w-[160px] h-[48px] md:w-[250px] md:h-[80px] flex-col justify-center flex-shrink-0 text-black text-center text-[20px] mx-[95px] mt-[20px] md:text-[36px] md:mx-[125px] md:mt-[30px] font-bold"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                        Install the TTpay.io Wallet
+                            {t('downloadModalTitle')}
                     </div>
 
-                    <div className="flex w-[210px] h-[40px] md:w-[300px] md:h-[50px] flex-col justify-center flex-shrink-0 text-black text-center text-[12px] md:text-[16px] mx-[70px] md:mx-[100px] mt-[20px]"
+                    <div className="flex w-[210px] h-[40px] md:w-[300px] md:h-[50px] flex-col justify-center flex-shrink-0 text-black text-center text-[12px] md:text-[16px] mx-[70px] md:mx-[100px] mt-[20px] font-medium"
                         style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                        Scan this QR code with your device's camera, then follow the instructions to download the app.
+                            {t('downloadModalContent')}
                     </div>
                     
                     <TabComponent></TabComponent>          

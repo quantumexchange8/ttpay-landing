@@ -1,7 +1,53 @@
 {
   "downloadButton": "Download",
-  "concernsAboutCrypto": {
+  "part1ContentBold": {
     "part1": "Release your concerns about cryptocurrency transactions with your",
     "part2": "trusted digital wallet."
-  }
+  },
+  "part1ContentNormal": "Your gateway to digital currencies and beyond. Trade, transfer funds, and make transactions in one secure and convenient application.",
+
+  "part2ContentNormal": "Merchants created",
+  "part2Button": "Create yours now",
+  "part3ContentBoldTitle": "Every feature you need for business freedom in one digital wallet",
+
+  "part3Notif1": "Received approved",
+  "part3Notif2": "Sent approved",
+  "part3ContentBold": "Deposit, Receive, Transfer and Withdrawal",
+  "part3ContentNormal": "Build and manage your cryptocurrency from your mobile device. Utilize our crypto- currency wallet payment gateway to establish unbreakable bridges with your business for any transaction.And protect your earnings by trading into USD stablecoins.",
+
+  "part4ContentBold": "Security for your wallet",
+  "part4ContentNormal": "Hold the passcord to your digital assets in a wallet so secure, no one can access items except for you - not even us. Protect your money with passcode and phone biometric security features. Automatically back up all your wallets and restore access with a single custom password.",
+  "part4Notif1": "Backup Successful",
+  "part4Notif2": "Passcode have been encrypted and backed up to Google Drive.",
+
+  "part5ContentBold": "A trusted gateway to the world of TRON (USDT)",
+  "part5ContentNormal": "Deposit, withdrawal, transfer, and receive - the most widely used TRC-20 tokens. Trade using decentralized cryptocurrency wallets, participate in digital markets, and more.",
+
+  "part6ContentBold": "Manage your transactions",
+  "part6ContentNormal": "‘Received’ and ‘Sent’ features in the wallets to organize your funds. Add personal notes to transactions and get a complete history of all your funds.",
+  "part6Notif1": "Received",
+  "part6Notif2": "Merchant name",
+  "part6Notif3": "Sent",
+  
+  "part7ContentBold": "Move money freely",
+  "part7ContentNormal": "Withdrawal and transfer cryptocurrencies anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Link unlimited wallets to support your privacy.",
+
+  "part8ContentBoldTitle": "Get the support you need",
+  "part8ContentNormal": "Use these comprehensive guides to understand the fundamentals of USDT (TRON) cryptocurrency. Watch easy-to-understand tutorials and become an advanced user in no time.",
+  "part8Button": "Start from here",
+
+  "downloadModalTitle": "Install the TTpay.io Wallet",
+  "downloadModalContent": "Scan this QR code with your device's camera, then follow the instructions to download the app.",
+
+  "contactModalTitle": "Send us a message",
+  "contactTitleNormal": "Welcome to the TTpay.io contact us page",
+  "formName": "Your Name",
+  "formEmail": "Email",
+  "formMessage": "Message",
+  "formSend": "Send"
+
+
+
+
+
 }

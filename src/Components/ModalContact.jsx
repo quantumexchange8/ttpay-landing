@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Icon from '../assets/images/icon.svg';
 import Close from '../assets/images/close.svg';
+import { useTranslation } from 'react-i18next';
 
 export default function ModalContact({ open, onClose, children }) {
 
@@ -8,6 +9,8 @@ export default function ModalContact({ open, onClose, children }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const { t, i18n } = useTranslation();
 
     // // Function to handle closing the modal and clearing input values
     // const handleClose = () => {
@@ -67,28 +70,34 @@ export default function ModalContact({ open, onClose, children }) {
                         </div>
                     </div>
                     
-                    <div className="flex w-[226px] h-[20px] md:w-[320px] md:h-[30px] flex-col justify-center flex-shrink-0 text-black text-center text-[24px] mt-[19.59px] mx-[61.5px] md:text-[36px] md:mx-[90px] md:mt-[30px]"
+                    <div className="flex w-[226px] h-[20px] md:w-[320px] md:h-[30px] flex-col justify-center flex-shrink-0 text-black text-center text-[24px] mt-[19.59px] mx-[61.5px] md:text-[36px] md:mx-[90px] md:mt-[30px] font-bold"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
-                        Send us a message
+                            {t('contactModalTitle')}
                     </div>
 
-                    <div className="flex w-[239px] h-[10px] md:w-[320px] md:h-[20px] flex-col justify-center flex-shrink-0 text-black text-center text-[12px] mx-[54.5px] mt-[10px] md:text-[16px] md:mx-[90px] md:mt-[10px]"
+                    <div className="flex w-[239px] h-[10px] md:w-[320px] md:h-[20px] flex-col justify-center flex-shrink-0 text-black text-center text-[12px] mx-[54.5px] mt-[10px] md:text-[16px] md:mx-[90px] md:mt-[10px] font-medium"
                         style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                        Welcome to the TTpay.io contact us page
+                            {t('contactTitleNormal')}
                     </div>
 
                     <form className="mt-[45px] md:mt-[78px] flex flex-col justify-center items-center">
                         <div className="flex flex-col items-center gap-[20px] md:gap-[30px]">
                             <div className="flex flex-col items-center gap-[10px]">
-                                <label htmlFor="name" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0">Your Name</label>
+                                <label htmlFor="name" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
+                                    {t('formName')}
+                                </label>
                                 <input type="name" id="name" className="w-[223.36px] h-[34.9px] md:w-[320px] md:h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3" value={name} onChange={(e) => setName(e.target.value)} required />
                             </div>
                             <div className="flex flex-col items-center gap-[10px]">
-                                <label htmlFor="email" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0">Email</label>
+                                <label htmlFor="email" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
+                                    {t('formEmail')}
+                                </label>
                                 <input type="email" id="email" className="w-[223.36px] h-[34.9px] md:w-[320px] md:h-[50px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             </div>
                             <div className="flex flex-col items-center gap-[10px]">
-                                <label htmlFor="message" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0">Message</label>
+                                <label htmlFor="message" className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
+                                    {t('formMessage')}
+                                </label>
                                 <textarea className="resize-none w-[223.36px] h-[139.6px] md:w-[320px] md:h-[200px] flex-shrink-0 rounded-[10px] bg-[#ddd] px-3 py-3" value={message} onChange={(e) => setMessage(e.target.value)} required
                                 style={{
                                     overflowY: 'scroll', // Add the ability to scroll
@@ -106,7 +115,9 @@ export default function ModalContact({ open, onClose, children }) {
                             </div>
                         </div>
                         <div className="send-button">
-                            <button type="submit" className="w-[139.6px] h-[34.9px] md:w-[200px] md:h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[13.96px] md:text-[20px] mt-[46.07px] md:mt-[66px] md:mb-[46px] md:mx-[150px]" style={{ cursor: 'pointer' }}>Send</button>
+                            <button type="submit" className="w-[139.6px] h-[34.9px] md:w-[200px] md:h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[13.96px] md:text-[20px] mt-[46.07px] md:mt-[66px] md:mb-[46px] md:mx-[150px] font-bold" style={{ cursor: 'pointer' }}>
+                                {t('formSend')}
+                            </button>
                         </div>
                     </form>
 

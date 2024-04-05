@@ -1,7 +1,48 @@
 {
   "downloadButton": "下载",
-  "concernsAboutCrypto": {
+  "part1ContentBold": {
     "part1": "釋放對加密貨幣交易的擔憂，使用您",
     "part2": "信任的數字錢包。"
-  }
+  },
+  "part1ContentNormal": "您通往數字貨幣及更多的門戶。在一個安全、方便的應用程式中進行交易、轉賬資金和進行交易。",
+
+  "part2ContentNormal": "商家已創建",
+  "part2Button": "現在創建您自己的",
+
+  "part3ContentBoldTitle": "一個數字錢包中擁有您業務自由所需的所有功能。",
+  "part3Notif1": "已成功存款",
+  "part3Notif2": "已成功提款",
+  "part3ContentBold": "存款、接收、轉帳和提款",
+  "part3ContentNormal": "從您的移動設備建立和管理您的加密貨幣。利用我們的加密貨幣錢包支付網關，為任何交易與您的業務建立牢不可破的橋樑。並通過交易成為美元穩定幣來保護您的收益。",
+
+  "part4ContentBold": "您錢包的安全",
+  "part4ContentNormal": "將您的數字資產密碼保存在一個安全的錢包中，除了您，沒有人可以訪問它 - 即使是我們也不行。使用密碼和手機生物識別安全功能來保護您的資金。自動備份所有錢包，並通過一個自定義密碼恢復訪問權限。",
+  "part4Notif1": "已成功備份",
+  "part4Notif2": "密碼已被加密並備份到 Google Drive.",
+
+  "part5ContentBold": "一個值得信賴的通往TRON (USDT) 世界的門戶",
+  "part5ContentNormal": "存款、提款、轉帳和接收 - 最廣泛使用的TRC-20代幣。使用去中心化的加密貨幣錢包進行交易，參與數字市場等等。",
+
+  "part6ContentBold": "管理您的交易",
+  "part6ContentNormal": "在錢包中具有“收到”和“發送”功能，以組織您的資金。為交易添加個人備註並獲取您所有資金的完整歷史記錄。",
+  "part6Notif1": "已收到充值",
+  "part6Notif2": "商家名稱",
+  "part6Notif3": "已提現資金",
+
+  "part7ContentBold": "自由的轉移資金",
+  "part7ContentNormal": "隨時隨地提款和轉移加密貨幣-無需回答問題。利用完全可定制的手續費進行轉帳。鏈接無限的錢包以支援您的隱私",
+
+  "part8ContentBoldTitle": "獲得您所需的支持",
+  "part8ContentNormal": "使用這些全面的指南來了解USDT（TRON）加密貨幣的基礎知識。觀看易於理解的教程，並在短時間內成為高級用戶。",
+  "part8Button": "從這裡開始",
+
+  "downloadModalTitle": "安裝TTpay.io錢包",
+  "downloadModalContent": "使用您設備的相機掃描此QR碼，然後按照說明下載應用程式",
+
+  "contactModalTitle": "給我們發信息",
+  "contactTitleNormal": "歡迎來到 TTpay.io 的聯繫我們頁面",
+  "formName": "您的姓名",
+  "formEmail": "電子郵件地址",
+  "formMessage": "您的信息",
+  "formSend": "發送"
 }
