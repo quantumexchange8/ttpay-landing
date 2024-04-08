@@ -93,39 +93,39 @@ const Home = () => {
                     
                     <div className="flex flex-wrap gap-[15px] justify-center w-full md:flex md:flex-wrap md:gap-[20px] md:px-0">
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo11} title="Home Video 1-1"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo11} title="Home Video 1-1"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo21} title="Home Video 2-1"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo21} title="Home Video 2-1"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo31} title="Home Video 3-1"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo31} title="Home Video 3-1"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo12} title="Home Video 1-2"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo12} title="Home Video 1-2"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo22} title="Home Video 2-2"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo22} title="Home Video 2-2"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo32} title="Home Video 3-2"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo32} title="Home Video 3-2"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo13} title="Home Video 1-3"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo13} title="Home Video 1-3"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo23} title="Home Video 2-3"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo23} title="Home Video 2-3"></video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay loop muted className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo33} title="Home Video 3-3"></video>
+                            <video autoPlay loop muted playsInline preload="auto" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" src={HomeVideo33} title="Home Video 3-3"></video>
                         </div>
                     </div>
                 </div>
@@ -218,7 +218,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay loop muted className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" src={WomanCreditCard} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted playsInline preload="auto" className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" src={WomanCreditCard} title="Home Video 1-1"></video>
                                 </div>
                             </div>
                             {/* Part 3-1-text */}
@@ -288,7 +288,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={DigitalIdentityBlocking} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted playsInline preload="auto" className="rounded-[250px] shadow-md object-cover w-full h-full" src={DigitalIdentityBlocking} title="Home Video 1-1"></video>
                                 </div>
                             </div>   
                         </div>
@@ -296,7 +296,7 @@ const Home = () => {
                         {/* Part 3 */}
                         <div className="h-full flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0 relative md:h-auto">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0">
-                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
+                                <video autoPlay loop muted playsInline preload="auto" className="rounded-[250px] shadow-md object-cover w-full h-full" src={AmericanDollar} title="Home Video 1-1"></video>
                                 <div className="bottom-[280px] right-[90px] gap-[5px] absolute md:bottom-[115px] md:left-[250px] w-[120px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
                                     <div className="w-[34.9px] h-[34.9px] md:w-[50px] md:h-[50px] flex-shrink-0">
                                         <img src={ApprovedWithoutRed} alt="Approved Without Red" className="w-50 h-50 flex-shrink-0"/>
@@ -415,7 +415,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={MoneyReceivedFund} title="Home Video 1-1"></video>
+                                    <video autoPlay loop muted playsInline preload="auto" className="rounded-[250px] shadow-md object-cover w-full h-full" src={MoneyReceivedFund} title="Home Video 1-1"></video>
                                 </div>
                             </div>
                        
@@ -424,7 +424,7 @@ const Home = () => {
                         {/* Part5 */}
                         <div className="h-full md:h-[550px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mb-[100px] md:mb-0 mt-[130px] md:mt-0">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                <video autoPlay loop muted className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1"></video>
+                                <video autoPlay loop muted playsInline preload="auto" className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1"></video>
                             </div>
                             <div className="flex flex-col md:gap-[30px] text-black mt-[36px] md:mt-0">
                                 <div className="flex w-[390px] h-[30px] md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold" 
