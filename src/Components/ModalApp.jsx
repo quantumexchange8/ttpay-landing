@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function ModalApp({ open, onClose, children }) {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         //backdrop 
