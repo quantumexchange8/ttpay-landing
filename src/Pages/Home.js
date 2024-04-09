@@ -30,6 +30,7 @@ import ModalContact from '../Components/ModalContact';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactLoading from 'react-loading';
+import LazyLoad from 'react-lazyload';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
@@ -133,9 +134,12 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-1">
-                                <source src={HomeVideo11} type="video/mp4"/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-1">
+                                    <source src={HomeVideo11} type="video/mp4"/>
+                                </video>
+                            </LazyLoad>
+                            
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -144,9 +148,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-1">
-                                <source src={HomeVideo21} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-1">
+                                    <source src={HomeVideo21} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -155,9 +161,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-1">
-                                <source src={HomeVideo31} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-1">
+                                    <source src={HomeVideo31} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -166,9 +174,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-2">
-                                <source src={HomeVideo12} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-2">
+                                    <source src={HomeVideo12} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -177,9 +187,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-2">
-                            <source src={HomeVideo22} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-2">
+                                    <source src={HomeVideo22} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -188,9 +200,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-2">
-                            <source src={HomeVideo32} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-2">
+                                    <source src={HomeVideo32} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -199,9 +213,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-3">
-                            <source src={HomeVideo13} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-3">
+                                    <source src={HomeVideo13} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -210,9 +226,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-3">
-                                <source src={HomeVideo23} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-3">
+                                    <source src={HomeVideo23} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
@@ -221,9 +239,11 @@ const Home = () => {
                                     <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
                                 </div>
                             )}
-                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-3">
-                                <source src={HomeVideo33} type='video/mp4'/>
-                            </video>
+                            <LazyLoad className='h-full' once>
+                                <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-3">
+                                    <source src={HomeVideo33} type='video/mp4'/>
+                                </video>
+                            </LazyLoad>
                         </div>
                     </div>
                 </div>
@@ -316,9 +336,11 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay muted playsInline loop="loop" className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" title="Home Video 1-1">
-                                        <source src={WomanCreditCard} type='video/mp4'/>
-                                    </video>
+                                    <LazyLoad className='h-full' once>
+                                        <video autoPlay muted playsInline loop="loop" className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" title="Home Video 1-1">
+                                            <source src={WomanCreditCard} type='video/mp4'/>
+                                        </video>
+                                    </LazyLoad>
                                 </div>
                             </div>
                             {/* Part 3-1-text */}
@@ -388,9 +410,11 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                        <source src={DigitalIdentityBlocking} type='video/mp4'/>
-                                    </video>
+                                    <LazyLoad className='h-full' once>
+                                        <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
+                                            <source src={DigitalIdentityBlocking} type='video/mp4'/>
+                                        </video>
+                                    </LazyLoad>
                                 </div>
                             </div>   
                         </div>
@@ -398,9 +422,11 @@ const Home = () => {
                         {/* Part 3 */}
                         <div className="h-full flex-shrink-0 flex flex-col md:flex-row justify-between items-center mt-[130px] md:mt-0 relative md:h-auto">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0">
-                                <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                    <source src={AmericanDollar} type='video/mp4'/>
-                                </video>
+                                <LazyLoad className='h-full' once>
+                                    <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
+                                        <source src={AmericanDollar} type='video/mp4'/>
+                                    </video>
+                                </LazyLoad>
                                 <div className="bottom-[280px] right-[90px] gap-[5px] absolute md:bottom-[115px] md:left-[250px] w-[120px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
                                     <div className="w-[34.9px] h-[34.9px] md:w-[50px] md:h-[50px] flex-shrink-0">
                                         <img src={ApprovedWithoutRed} alt="Approved Without Red" className="w-50 h-50 flex-shrink-0"/>
@@ -519,9 +545,11 @@ const Home = () => {
                                 </div>
 
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                    <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                        <source src={MoneyReceivedFund} type='video/mp4'/>
-                                    </video>
+                                    <LazyLoad className='h-full' once>
+                                        <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
+                                            <source src={MoneyReceivedFund} type='video/mp4'/>
+                                        </video>
+                                    </LazyLoad>
                                 </div>
                             </div>
                        
@@ -530,9 +558,11 @@ const Home = () => {
                         {/* Part5 */}
                         <div className="h-full md:h-[550px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mb-[100px] md:mb-0 mt-[130px] md:mt-0">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
-                                <video autoPlay  muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1">
-                                    <source src={FemaleFingerHolding} type='video/mp4'/>
-                                </video>
+                                <LazyLoad className='h-full' once>
+                                    <video autoPlay  muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1">
+                                        <source src={FemaleFingerHolding} type='video/mp4'/>
+                                    </video>
+                                </LazyLoad>
                             </div>
                             <div className="flex flex-col md:gap-[30px] text-black mt-[36px] md:mt-0">
                                 <div className="flex w-full md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold px-[22px] md:px-0 text-center" 
