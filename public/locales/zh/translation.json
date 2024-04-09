@@ -2,21 +2,24 @@
   "downloadButton": "下载",
   "part1ContentBold": {
     "part1": "釋放對加密貨幣交易的擔憂，使用您",
-    "part2": "信任的數字錢包。"
+    "part2": "信任的數字錢包"
   },
   "part1ContentNormal": "您通往數字貨幣及更多的門戶。在一個安全、方便的應用程式中進行交易、轉賬資金和進行交易。",
+  "part1ContentNormal1": "您通往數字貨幣及更多的門戶",
+  "part1ContentNormal2": "在一個安全、方便的應用程式中",
+  "part1ContentNormal3": "進行交易、轉賬資金和進行交易",
 
   "part2ContentNormal": "商家已創建",
   "part2Button": "現在創建您自己的",
 
-  "part3ContentBoldTitle": "一個數字錢包中擁有您業務自由所需的所有功能。",
+  "part3ContentBoldTitle": "一個數字錢包中擁有您業務自由所需的所有功能",
   "part3Notif1": "已成功存款",
   "part3Notif2": "已成功提款",
   "part3ContentBold": "存款、接收、轉帳和提款",
-  "part3ContentNormal": "從您的移動設備建立和管理您的加密貨幣。利用我們的加密貨幣錢包支付網關，為任何交易與您的業務建立牢不可破的橋樑。並通過交易成為美元穩定幣來保護您的收益。",
+  "part3ContentNormal": "從您的移動設備建立和管理您的加密貨幣。利用我們的加密貨幣錢包支付網關，為任何交易與您的業務建立牢不可破的橋樑。並通過交易成為美元穩定幣來保護您的收益",
 
   "part4ContentBold": "您錢包的安全",
-  "part4ContentNormal": "將您的數字資產密碼保存在一個安全的錢包中，除了您，沒有人可以訪問它 - 即使是我們也不行。使用密碼和手機生物識別安全功能來保護您的資金。自動備份所有錢包，並通過一個自定義密碼恢復訪問權限。",
+  "part4ContentNormal": "將您的數字資產密碼保存在一個安全的錢包中，除了您，沒有人可以訪問它 - 即使是我們也不行。使用密碼和手機生物識別安全功能來保護您的資金。自動備份所有錢包，並通過一個自定義密碼恢復訪問權限",
   "part4Notif1": "已成功備份",
   "part4Notif2": "密碼已被加密並備份到 Google Drive.",
 

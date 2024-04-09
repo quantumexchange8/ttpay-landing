@@ -39,7 +39,7 @@ const ModalContact = ({ open, onClose }) => {
 
     return (
         <div id="modal-contact" onClick={handleClose} className={`fixed inset-0 flex justify-center z-50 items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`}>
-            <div onClick={(e) => e.stopPropagation()} className={`p-7 md:w-[500px] w-[349px] md:h-[900px] h-[628.20px] md:p-11 bg-white rounded-[50px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
+            <div onClick={(e) => e.stopPropagation()} className={`p-7 md:w-[500px] w-[349px] md:h-[900px] h-[628.20px] md:p-11 bg-white rounded-[30px] shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col gap-5'>
                         <div className="relative">
@@ -86,7 +86,7 @@ const ModalContact = ({ open, onClose }) => {
 const FormField = ({ label, type, value, onChange }) => {
     return (
         <div className="flex flex-col items-center gap-[10px]">
-            <label htmlFor={type} className="flex w-[85px] h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
+            <label htmlFor={type} className="flex w-full h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
                 {label}
             </label>
             {type === "textarea" ? (

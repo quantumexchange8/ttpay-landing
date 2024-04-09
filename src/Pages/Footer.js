@@ -16,14 +16,14 @@ const Footer = () => {
     <div>
         <div className="bg-[#f4efff] sm:w-full h-[442px] md:h-[200px] md:w-full flex justify-center">
             <div className="flex-col w-full md:w-[1000px] flex md:flex-row justify-between items-center mb-[65px] md:mb-0">
-                <div className="flex flex-col text-black md:mt-[20px]">
-                    <div className="flex w-full h-[90px] md:w-[459px] md:h-[30px] flex-col justify-center flex-shrink-0 text-[40px] md:text-start text-center mt-[66px] md:mt-0 px-5 md:px-0 font-bold"
+                <div className="flex flex-col text-black gap-5 md:w-[660px]">
+                    <div className="flex w-full flex-col justify-center flex-shrink-0 text-[40px] md:text-start text-center mt-[66px] md:mt-0 px-5 md:px-0 font-bold"
                         style={{ fontFamily:"SF-Pro-Display-Bold", fontSize:"40px", fontStyle:"normal", lineHeight:"normal" }}>
                             {t('part8ContentBoldTitle')}
                     </div>
 
-                    <div className="flex w-full h-100px md:h-[70px] flex-col justify-center md:mt-[20px] md:w-[450px] px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-thin" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
-                        <div className="flex justify-center sm:justify-start px-12 sm:px-0 text-center sm:text-left">
+                    <div className="flex w-full flex-col justify-center text-center md:text-start md:w-full px-5 md:px-0 text-black text-[18px] md:text-[20px] md:font-medium font-medium" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
+                        <div className="flex justify-center sm:justify-start px-5 sm:px-0 sm:text-left">
                         {t('part8ContentNormal')}
                         </div>
                     </div>

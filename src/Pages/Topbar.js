@@ -32,7 +32,7 @@ const Topbar = () => {
                                 <div className="menu-dropdown flex items-center">
                                     <Menu as="div" className="relative inline-block text-left">
                                         <div className='flex items-center'>
-                                            <Menu.Button>
+                                            <Menu.Button className="focus:outline-none">
                                                 <img src={World} alt="icon" className="w-10 h-10 cursor-pointer" />
                                             </Menu.Button>
                                         </div>
@@ -45,15 +45,15 @@ const Topbar = () => {
                                             leaveFrom="transform opacity-100 scale-100"
                                             leaveTo="transform opacity-0 scale-95"
                                         >
-                                            <Menu.Items className="absolute top-[98px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-[127px] h-[80px] flex items-center justify-center text-white text-center font-inter font-bold text-lg" style={{ background: 'linear-gradient(135deg, #5200FF 0%, #772BFF 35%, #010003 100%)' }}>
-                                                <div className="flex flex-col py-4 w-full">
+                                            <Menu.Items className="absolute top-[98px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-[127px] h-auto flex items-center justify-center text-white text-center font-inter font-bold text-lg focus:outline-none" style={{ background: 'linear-gradient(135deg, #5200FF 0%, #772BFF 35%, #010003 100%)' }}>
+                                                <div className="flex flex-col w-full">
                                                     <Menu.Item>
                                                         {({ active }) => (
                                                             <button
                                                                 onClick={() => toggleLanguage('en')}
                                                                 className={`${
                                                                     active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
-                                                                } group flex w-full items-center rounded-md px-2 py-2 justify-center font-xl`}
+                                                                } group flex w-full items-center rounded-md px-2 py-3 justify-center font-xl`}
                                                             >
                                                                 English
                                                             </button>
@@ -65,7 +65,7 @@ const Topbar = () => {
                                                                 onClick={() => toggleLanguage('zh')}
                                                                 className={`${
                                                                     active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
-                                                                } group flex w-full items-center rounded-md px-2 py-2 justify-center font-xl`}
+                                                                } group flex w-full items-center rounded-md px-2 py-3 justify-center font-xl`}
                                                             >
                                                                 中文
                                                             </button>
@@ -105,15 +105,15 @@ const Topbar = () => {
                                                 leaveFrom="transform opacity-100 scale-100"
                                                 leaveTo="transform opacity-0 scale-95"
                                             >
-                                                <Menu.Items className="absolute top-[98px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-[127px] h-[80px] flex items-center justify-center text-white text-center font-inter font-bold text-lg" style={{ background: 'linear-gradient(135deg, #5200FF 0%, #772BFF 35%, #010003 100%)' }}>
-                                                    <div className="flex flex-col py-4 w-full">
+                                                <Menu.Items className="absolute top-[98px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-[127px] h-auto md:h-[80px] flex items-center justify-center text-white text-center font-inter font-bold text-lg" style={{ background: 'linear-gradient(135deg, #5200FF 0%, #772BFF 35%, #010003 100%)' }}>
+                                                    <div className="flex flex-col w-full gap-3">
                                                         <Menu.Item>
                                                             {({ active }) => (
                                                                 <button
                                                                     onClick={() => toggleLanguage('en')}
                                                                     className={`${
                                                                         active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
-                                                                    } group flex w-full items-center rounded-md px-2 py-2 justify-center font-xl`}
+                                                                    } group flex w-full items-center rounded-md px-2 pt-3 justify-center font-xl`}
                                                                 >
                                                                     English
                                                                 </button>
@@ -125,7 +125,7 @@ const Topbar = () => {
                                                                     onClick={() => toggleLanguage('zh')}
                                                                     className={`${
                                                                         active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
-                                                                    } group flex w-full items-center rounded-md px-2 py-2 justify-center font-xl`}
+                                                                    } group flex w-full items-center rounded-md px-2 pb-3 justify-center font-xl`}
                                                                 >
                                                                     中文
                                                                 </button>

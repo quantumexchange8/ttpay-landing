@@ -18,13 +18,13 @@ export default function Example() {
   const [selectedTab, setSelectedTab] = useState('ios'); // Initialize selectedTab state
 
   return (
-    <div>
+    <div className='w-full flex flex-col items-center gap-12'>
       <Tab.Group>
-        <Tab.List className="w-[245px] h-[46.2px] md:w-[350px] md:h-[66px] flex-shrink-0 rounded-[10px] bg-[#CCCCCC] mx-[52.5px] mt-[41px] md:mx-[75px] md:mt-[50px] flex flex-row justify-center items-center">
+        <Tab.List className="w-[245px] h-[46.2px] md:w-[350px] md:h-[66px] flex-shrink-0 rounded-[10px] bg-[#CCCCCC] flex flex-row justify-center items-center">
             <Tab key="ios" className={({ selected }) =>
                 classNames(
-                    'w-[119.7px] h-[40.2px] md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]','ring-white/60',
-                    selected ? 'bg-white text-black' : 'text-[#888]'
+                    'w-[119.7px] py-2 md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]','ring-white/60',
+                    selected ? 'bg-white text-black focus:outline-none' : 'text-[#888]'
                 )
                 } onClick={() => setSelectedTab('ios')} // Set selectedTab to 'ios' when clicked
             >
@@ -57,9 +57,9 @@ export default function Example() {
                 key="android"
                 className={({ selected }) =>
                 classNames(
-                    'w-[119.7px] h-[44.2px] md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]',
+                    'w-[119.7px] py-2 md:w-[171px] md:h-[58px] flex-shrink-0 rounded-[10px]',
                     'ring-white/60',
-                    selected ? 'bg-white text-black' : 'text-[#888]'
+                    selected ? 'bg-white text-black focus:outline-none' : 'text-[#888]'
                 )
                 }
                 onClick={() => setSelectedTab('android')} // Set selectedTab to 'android' when clicked
@@ -101,7 +101,7 @@ export default function Example() {
             </Tab.Panels>
         </div>
         <div className="sm:hidden">
-            <div className="flex w-full justify-center mt-[50px]">
+            <div className="flex w-full justify-center">
             {/* w-[256px] h-[256px] flex-shrink-0 rounded-[50px] flex mx-[122px] mb-[48px] mt-[50px] */}
                 <img className="w-[60px] h-[50.4px]" src={DownloadPhone} alt="Download Phone Icon" style={{ cursor: 'pointer' }}/>
             </div>

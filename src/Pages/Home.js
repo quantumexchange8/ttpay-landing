@@ -27,14 +27,34 @@ import ScrollUp from '../assets/images/scrollup.svg';
 import ModalApp from '../Components/ModalApp';
 // import Tab from '../Components/Tab';
 import ModalContact from '../Components/ModalContact';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import ReactLoading from 'react-loading';
 
 const Home = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [language, setLanguage] = useState(i18n.language);
 
+    useEffect(() => {
+        const languageChangeListener = () => {
+            setLanguage(i18n.language);
+        };
+
+        i18n.on('languageChanged', languageChangeListener);
+
+        return () => {
+            i18n.off('languageChanged', languageChangeListener);
+        };
+    }, [i18n]);
+
+    const [videoLoading, setVideoLoading] = useState(true);
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
+
+    const handleVideoLoaded = () => {
+        setVideoLoading(false);
+    };
+
     return (
         <div className="wrapper min-w-xs md:h-full w-full">
 
@@ -42,14 +62,29 @@ const Home = () => {
                 <div className="flex flex-col gap-9 h-auto w-[390px] mb-[100px] md:flex-row justify-center md:mb-[200px] md:w-[1000px] md:gap-[77px]">
                     <div className="flex flex-col justify-center gap-6 md:gap-[30px] w-full">
                         <div className="flex w-full md:w-[420px] flex-col justify-center text-black text-[28px] md:text-[40px]">
-                            <div className="w-[287px] md:w-[420px] px-5 md:px-0 " style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                            <div className="w-[330px] md:w-[420px] px-5 md:px-0 font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                 {t('part1ContentBold.part1')} <span className="text-[#0038FF]"> {t('part1ContentBold.part2')}</span>
                             </div>
                         </div>
                         <div className="flex w-full h-auto flex-col justify-center px-5 md:px-0 text-black text-[18px] md:text-[20px]" style={{ fontFamily: "SF-Pro-Display-Medium", fontStyle: "normal", lineHeight: "normal" }}>
-                            <div className="w-full ">
-                            {t('part1ContentNormal')}
-                            </div>
+                            {language === 'zh' ? (
+                                <div>
+                                    <div className="w-full flex flex-col font-semibold md:hidden">
+                                        <span>{t('part1ContentNormal1')}</span>
+                                        <span>{t('part1ContentNormal2')}</span>
+                                        <span>{t('part1ContentNormal3')}</span>
+                                    </div>
+                                    <div className="w-full flex-col font-semibold hidden md:flex">
+                                        {t('part1ContentNormal')}
+                                    </div>
+                                </div>
+                                
+                                
+                            ) : (
+                                <div className="w-full ">
+                                    {t('part1ContentNormal')}
+                                </div>
+                            )}
                         </div>
                         <div className="w-full h-auto px-5 md:px-0 flex gap-2">                 
                             <div 
@@ -93,55 +128,100 @@ const Home = () => {
                     
                     <div className="flex flex-wrap gap-[15px] justify-center w-full md:flex md:flex-wrap md:gap-[20px] md:px-0">
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-1">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-1">
                                 <source src={HomeVideo11} type="video/mp4"/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-1">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-1">
                                 <source src={HomeVideo21} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-1">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-1">
                                 <source src={HomeVideo31} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-2">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-2">
                                 <source src={HomeVideo12} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-2">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-2">
                             <source src={HomeVideo22} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-2">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-2">
                             <source src={HomeVideo32} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-3">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-3">
                             <source src={HomeVideo13} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-3">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-3">
                                 <source src={HomeVideo23} type='video/mp4'/>
                             </video>
                         </div>
 
                         <div className="w-[106px] h-[106px] md:w-[140px] md:h-[140px]">
-                            <video autoPlay muted playsInline loop="loop" className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-3">
+                            {videoLoading && (
+                                <div className="loading-spinner flex justify-center items-center">
+                                    <ReactLoading type={'bars'} color={'#0038FF'} height={50} width={50} />
+                                </div>
+                            )}
+                            <video autoPlay muted playsInline loop="loop" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-3">
                                 <source src={HomeVideo33} type='video/mp4'/>
                             </video>
                         </div>
@@ -156,12 +236,12 @@ const Home = () => {
                         <div className="text-[64px] md:text-[96px]" style={{ color:"#0028ff", fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             386,370
                         </div>
-                        <div className="text-[32px] md:text-[40px]  text-center md:text-start" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", lineHeight:"normal" }}>
+                        <div className="text-[32px] md:text-[40px] text-center md:text-start font-bold" style={{ color:"#888", fontFamily:"SF-Pro-Display-Bold", lineHeight:"normal" }}>
                             {t('part2ContentNormal')}
                         </div>
                     </div>
                     <div onClick={() => setOpenModalContact(true)}>
-                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] "
+                        <button className="w-[200px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] font-bold"
                             style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal",}}>
                                 {t('part2Button')}
                         </button>
@@ -174,7 +254,7 @@ const Home = () => {
                 <div className="w-[390px] mb-0 md:w-[1000px] md:mb-[200px]">
                     <div className="mt-[50px] md:mt-[200px] flex flex-col md:gap-[300px]">
 
-                        <div className="flex justify-center text-[32px] mb-12 md:text-5xl text-center w-full px-[22px]" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                        <div className="flex justify-center text-[32px] mb-12 md:text-5xl text-center w-full px-[22px] font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                             <span className='md:w-[800px]'>{t('part3ContentBoldTitle')}</span>
                         </div>
 
@@ -186,12 +266,12 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] "
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-bold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", lineHeight:"normal" }}>
                                                     {t('part3Notif1')}
                                                 
                                             </div>
-                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px] "
+                                            <div className="flex w-[180px] h-4 flex-col justify-center flex-shrink-0 text-[9px] md:text-[14px]"
                                                 style={{ color:"#666", fontFamily:"SF-Pro-Display-Medium", lineHeight:"normal" }}>
                                                     $3,488.00 USDT for TRON
                                             </div>
@@ -205,7 +285,7 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] "
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-bold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", fontStyle:"normal", lineHeight:"normal" }}>
                                                 {t('part3Notif1')}
                                             </div>
@@ -223,7 +303,7 @@ const Home = () => {
                                             <img src={Approved} alt="icon"/>
                                         </div>
                                         <div className="flex flex-col mt-[12.33px] md:mt-[19px] md:gap-[10px] w-[20px] md:w-full">
-                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] "
+                                            <div className="flex w-[150px] h-4 flex-col justify-center flex-shrink-0 text-black text-[11px] md:text-[16px] font-bold"
                                                 style={{ fontFamily:"SF-Pro-Display-Semibold", lineHeight:"normal" }}>
                                                     {t('part3Notif2')}
                                             </div>
@@ -242,14 +322,14 @@ const Home = () => {
                                 </div>
                             </div>
                             {/* Part 3-1-text */}
-                            <div className="flex flex-col items-center gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
-                                <div className="flex w-[300px] h-[70px] md:w-full md:h-auto flex-col justify-center text-black text-[24px] text-center md:text-start md:text-[36px] md:ml-0 " 
+                            <div className="flex flex-col gap-[16px] md:gap-[45px] mt-[36.21px] md:mt-[135px]">
+                                <div className="flex w-full text-center md:text-left px-[22px] md:px-0 md:w-full md:h-auto flex-col text-black text-[24px] md:text-[36px] md:ml-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                     {t('part3ContentBold')}
                                 </div>
-                                <div className="flex w-[390px] md:w-full h-[130px] md:h-auto flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] "
+                                <div className="flex w-[390px] md:w-full h-[130px] md:h-auto flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                        <div className="flex justify-center sm:justify-start px-9 sm:px-0 text-center sm:text-left">
+                                        <div className="flex justify-center sm:justify-start px-[22px] text-center sm:px-0 sm:text-left">
                                             {t('part3ContentNormal')}
                                         </div>
                                 </div>
@@ -258,13 +338,13 @@ const Home = () => {
                         {/* Part 2*/}
                         <div className="h-full md:h-auto flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0">
                             <div className="flex flex-col justify-center mt-[36px] md:gap-[30px] md:mt-0 text-black">
-                                <div className="flex w-[300px] md:w-[400px] h-[30px] md:h-[45px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] ml-10 md:ml-0 " 
+                                <div className="flex w-full px-[22px] md:px-0 text-center md:w-[400px] h-[30px] md:h-[45px] flex-col justify-center flex-shrink-0 text-black text-[24px] md:text-start md:text-[36px] font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                         {t('part4ContentBold')}
                                 </div>
                                 <div className="flex w-full h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px]  md:w-[370px] md:text-[20px] md:h-auto"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                        <div className="flex justify-center sm:justify-start px-5 sm:px-0 text-center sm:text-left">
+                                        <div className="flex justify-center sm:justify-start px-[22px] sm:px-0 text-center sm:text-left">
                                             {t('part4ContentNormal')}
                                         </div>
                                 </div>
@@ -335,11 +415,11 @@ const Home = () => {
                             </div>
                             <div className="flex flex-col text-black mt-[36px] md:mt-0 md:gap-[30px]">
                             {/* gap-[30px] */}
-                                <div className="flex w-[390px] h-[60px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 px-9 md:px-0 " 
+                                <div className="flex w-full h-auto md:w-[390px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[24px] md:text-start md:text-[36px] mb-[16px] md:mb-0 px-[22px] text-center md:px-0 font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                         {t('part5ContentBold')}
                                     </div>
-                                <div className="flex w-[390px] h-[75px] md:w-[425px] md:h-[100px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] text-center md:text-start px-9 md:px-0 "
+                                <div className="flex w-full md:w-[425px] md:h-[100px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] md:text-start px-[22px] text-center md:px-0 font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
                                         {t('part5ContentNormal')}
                                 </div>
@@ -348,15 +428,15 @@ const Home = () => {
 
                         {/* Part4 */}
                         <div className="h-full md:h-[500px] flex-shrink-0 flex flex-col-reverse md:flex-row justify-between mt-[130px] md:mt-0 items-center">
-                            <div className="flex flex-col text-black mt-[36px] md:mt-0 gap-[30px]">
+                            <div className="flex flex-col text-black mt-[36px] md:mt-0">
                             
-                                <div className="flex w-[390px] h-[30px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 " 
+                                <div className="flex w-full md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[24px] md:text-[36px] mb-[16px] md:mb-0 px-[22px] md:px-0 text-center md:text-start font-bold" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                     {t('part6ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[380px] h-[75px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] "
+                                <div className="flex w-full md:w-[380px] h-[75px] md:h-[90px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                    <div className="flex justify-center sm:justify-start px-10 sm:px-0 text-center sm:text-left">
+                                    <div className="flex justify-center sm:justify-start px-[22px] sm:px-0 sm:text-left text-center">
                                         {t('part6ContentNormal')}
                                     </div>
                                 </div>
@@ -455,13 +535,13 @@ const Home = () => {
                                 </video>
                             </div>
                             <div className="flex flex-col md:gap-[30px] text-black mt-[36px] md:mt-0">
-                                <div className="flex w-[390px] h-[30px] md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] text-center md:text-start md:text-[36px] mb-[16px] md:mb-0 " 
+                                <div className="flex w-full md:h-[40px] flex-col justify-center flex-shrink-0 text-black text-[24px] md:text-start md:text-[36px] mb-[16px] md:mb-0 font-bold px-[22px] md:px-0 text-center" 
                                     style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
                                     {t('part7ContentBold')}
                                 </div>
-                                <div className="flex w-full md:w-[380px] h-[93px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] "
+                                <div className="flex w-full md:w-[380px] h-[93px] md:h-[130px] flex-col justify-center flex-shrink-0 text-black text-[16px] md:text-[20px] font-medium text-center md:text-start md:px-0"
                                     style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
-                                    <div className="flex justify-center sm:justify-start px-12 sm:px-0 text-center sm:text-left">
+                                    <div className="flex justify-center sm:justify-start px-[22px] sm:px-0 sm:text-left">
                                         {t('part7ContentNormal')}
                                     </div>
                                 </div>
@@ -471,7 +551,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-6 right-6 animate-bounce" style={{ animationDuration: '1.5s' }}>
+            <div className="fixed bottom-6 right-6" style={{ animationDuration: '1.5s' }}>
                 <div className="w-[50px] h-[50px] flex-shrink-0" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
                     <img src={ScrollUp} alt="icon"/>
                 </div>
