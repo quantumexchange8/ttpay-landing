@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="w-full md:w-[1000px] md:h-[215px] flex justify-between flex-col md:flex-row">
                 <div className="w-[463px] md:h-[70px] mt-[60px] px-5 md:px-0 md:mt-[40px] flex gap-2">                 
                     <div 
-                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[10px] md:rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                     style={{ cursor: 'pointer' }}
                     >
                         <div className="w-[22.289px] h-[27.274px] md:w-[35.957px] md:h-[44px] flex-shrint-0">
@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
 
                     <div 
-                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                    className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[10px] md:rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                     style={{ cursor: 'pointer' }}
                     >
                         <div className="w-[24.795px] h-[27.274px] md:w-10 md:h-11 flex-shrink-0">
@@ -61,7 +61,7 @@ const Footer = () => {
                     </div>
 
                     <div 
-                    className="w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                    className="w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[10px] md:rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
                     onClick={() => setOpenModalApp(true)} 
                     style={{ cursor: 'pointer' }}
                     >                         

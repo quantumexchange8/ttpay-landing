@@ -8,20 +8,6 @@ import Received from '../assets/images/received.svg';
 import Sent from '../assets/images/sent.svg';
 import ApprovedWithoutRed from '../assets/images/approved-without-red.svg';
 import RedIcon from '../assets/images/red-icon.svg';
-import HomeVideo11 from '../assets/videos/home-video-1-1.mp4';
-import HomeVideo12 from '../assets/videos/home-video-1-2.mp4';
-import HomeVideo13 from '../assets/videos/home-video-1-3.mp4';
-import HomeVideo21 from '../assets/videos/home-video-2-1.mp4';
-import HomeVideo22 from '../assets/videos/home-video-2-2.mp4';
-import HomeVideo23 from '../assets/videos/home-video-2-3.mp4';
-import HomeVideo31 from '../assets/videos/home-video-3-1.mp4';
-import HomeVideo32 from '../assets/videos/home-video-3-2.mp4';
-import HomeVideo33 from '../assets/videos/home-video-3-3.mp4';
-import WomanCreditCard from '../assets/videos/woman-credit-card.mp4';
-import DigitalIdentityBlocking from '../assets/videos/digital-identity-blocking.mp4';
-import AmericanDollar from '../assets/videos/american-dollar.mp4';
-import MoneyReceivedFund from '../assets/videos/money-received-fund.mp4';
-import FemaleFingerHolding from '../assets/videos/female-finger-holding.mp4';
 import ScrollUp from '../assets/images/scrollup.svg';
 // import Icon from '../assets/images/icon.svg';
 import ModalApp from '../Components/ModalApp';
@@ -89,7 +75,7 @@ const Home = () => {
                         </div>
                         <div className="w-full h-auto px-5 md:px-0 flex gap-2">                 
                             <div 
-                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[10px] md:rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                             style={{ cursor: 'pointer' }}
                             >
                                 <div className="w-[22.289px] h-[27.274px] md:w-[35.957px] md:h-[44px] flex-shrint-0">
@@ -97,7 +83,7 @@ const Home = () => {
                                 </div>                                                                    
                             </div>
                             <div 
-                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
+                            className="w-[43.391px] h-[43.391px] md:w-[70px] md:h-[70px] flex-shrink rounded-[10px] md:rounded-[15px] bg-[#333] flex justify-center items-center hover:-translate-y-1 transition-all duration-300 ease-in-out" 
                             style={{ cursor: 'pointer' }}
                             >
                                 <div className="w-[24.795px] h-[27.274px] md:w-10 md:h-11 flex-shrink-0">
@@ -105,7 +91,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div 
-                            className="flex py-[9px] px-[10px] md:py-[15px] md:px-4 w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                            className="flex py-[9px] px-[10px] md:py-[15px] md:px-4 w-[190.3px] h-[43.391px] md:w-[307px] md:h-[70px] flex-shrink-0 rounded-[10px] md:rounded-[15px] border border-gray-300 bg-white shadow-md hover:-translate-y-1 transition-all duration-300 ease-in-out"
                             // hover:animate-bounce
                             onClick={() => setOpenModalApp(true)} 
                             style={{ cursor: 'pointer' }}
@@ -136,7 +122,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-1">
-                                    <source src={HomeVideo11} type="video/mp4"/>
+                                    <source src="/assets/videos/home-video-1-1.mp4" type="video/mp4"/>
                                 </video>
                             </LazyLoad>
                             
@@ -150,7 +136,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-1">
-                                    <source src={HomeVideo21} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-2-1.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -163,7 +149,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-1">
-                                    <source src={HomeVideo31} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-3-1.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -176,7 +162,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-2">
-                                    <source src={HomeVideo12} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-1-2.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -189,7 +175,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-2">
-                                    <source src={HomeVideo22} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-2-2.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -202,7 +188,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-2">
-                                    <source src={HomeVideo32} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-3-2.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -215,7 +201,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 1-3">
-                                    <source src={HomeVideo13} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-1-3.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -228,7 +214,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 2-3">
-                                    <source src={HomeVideo23} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-2-3.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -241,7 +227,7 @@ const Home = () => {
                             )}
                             <LazyLoad className='h-full' once>
                                 <video autoPlay muted playsInline loop="loop" preload="auto" onLoadedData={handleVideoLoaded} className="w-full h-full rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" title="Home Video 3-3">
-                                    <source src={HomeVideo33} type='video/mp4'/>
+                                    <source src="/assets/videos/home-video-3-3.mp4" type='video/mp4'/>
                                 </video>
                             </LazyLoad>
                         </div>
@@ -338,7 +324,7 @@ const Home = () => {
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
                                     <LazyLoad className='h-full' once>
                                         <video autoPlay muted playsInline loop="loop" className="rounded-[250px] object-cover w-full h-full drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]" title="Home Video 1-1">
-                                            <source src={WomanCreditCard} type='video/mp4'/>
+                                            <source src="/assets/videos/woman-credit-card.mp4" type='video/mp4'/>
                                         </video>
                                     </LazyLoad>
                                 </div>
@@ -412,7 +398,7 @@ const Home = () => {
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
                                     <LazyLoad className='h-full' once>
                                         <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                            <source src={DigitalIdentityBlocking} type='video/mp4'/>
+                                            <source src="/assets/videos/digital-identity-blocking.mp4" type='video/mp4'/>
                                         </video>
                                     </LazyLoad>
                                 </div>
@@ -424,7 +410,7 @@ const Home = () => {
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0">
                                 <LazyLoad className='h-full' once>
                                     <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                        <source src={AmericanDollar} type='video/mp4'/>
+                                        <source src="/assets/videos/american-dollar.mp4" type='video/mp4'/>
                                     </video>
                                 </LazyLoad>
                                 <div className="bottom-[280px] right-[90px] gap-[5px] absolute md:bottom-[115px] md:left-[250px] w-[120px] md:w-[170px] md:h-[50px] flex items-end justify-end md:gap-[10px]">
@@ -547,7 +533,7 @@ const Home = () => {
                                 <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
                                     <LazyLoad className='h-full' once>
                                         <video autoPlay muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
-                                            <source src={MoneyReceivedFund} type='video/mp4'/>
+                                            <source src="/assets/videos/money-received-fund.mp4" type='video/mp4'/>
                                         </video>
                                     </LazyLoad>
                                 </div>
@@ -559,8 +545,8 @@ const Home = () => {
                         <div className="h-full md:h-[550px] flex-shrink-0 flex flex-col md:flex-row justify-between items-center mb-[100px] md:mb-0 mt-[130px] md:mt-0">
                             <div className="w-[324.349px] h-[324.349px] md:w-[500px] md:h-[500px] flex-shrink-0 md:mt-[33px] md:mb-[54px]">
                                 <LazyLoad className='h-full' once>
-                                    <video autoPlay  muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" src={FemaleFingerHolding} title="Home Video 1-1">
-                                        <source src={FemaleFingerHolding} type='video/mp4'/>
+                                    <video autoPlay  muted playsInline loop="loop" className="rounded-[250px] shadow-md object-cover w-full h-full" title="Home Video 1-1">
+                                        <source src="/assets/videos/female-finger-holding.mp4" type='video/mp4'/>
                                     </video>
                                 </LazyLoad>
                             </div>
