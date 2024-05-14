@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import Icon from '../assets/images/icon.svg';
-import World from '../assets/images/world.svg';
-import DownloadIcon from '../assets/images/download.svg';
 import ModalApp from '../Components/ModalApp';
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
+import { DownloadIcon, Icon, IconMobile, WordIcon, WordMobileIcon } from '../Components/Icon';
 
 const Topbar = () => {
     const { t, i18n } = useTranslation();
@@ -19,21 +17,28 @@ const Topbar = () => {
     return (
         <div className="TOPBAR">
             <div className="bg-[#f4efffe6] h-[70px] fixed z-50 flex justify-center backdrop-blur-sm w-full">
-                <div className="flex justify-between w-full sm:w-[1000px]">
-                    <div className="flex items-center px-5 w-full md:px-0">
+                <div className="flex justify-between w-full sm:w-[1000px] mx-[22px] md:mx-0">
+                    <div className="flex items-center w-full">
                         <div className="flex justify-between w-full items-center h-full">
                             <div 
-                                className="w-[38px] h-[38px] md:w-[50px] md:h-[50px] rounded-[10px]"
+                                className="w-[38px] h-[38px] md:w-[50px] md:h-[50px] rounded-[7px] md:rounded-[10px]"
                                 style={{ cursor: 'pointer' }}
                             >
-                                <img src={Icon} alt="icon"/>
+                                <div className='hidden md:block'>
+                                    <Icon/>
+                                </div>
+                                <div className='md:hidden'>
+                                    <IconMobile/>
+                                </div>
+                                {/* <img src={Icon} alt="icon"/> */}
+
                             </div>
-                            <div className="hidden sm:flex items-center gap-5">
+                            <div className="hidden sm:flex items-center gap-9">
                                 <div className="menu-dropdown flex items-center">
                                     <Menu as="div" className="relative inline-block text-left">
                                         <div className='flex items-center'>
-                                            <Menu.Button className="focus:outline-none">
-                                                <img src={World} alt="icon" className="w-10 h-10 cursor-pointer" />
+                                            <Menu.Button className="focus:outline-none" aria-label="Open menu">
+                                                <WordIcon/>
                                             </Menu.Button>
                                         </div>
                                         <Transition
@@ -50,6 +55,7 @@ const Topbar = () => {
                                                     <Menu.Item>
                                                         {({ active }) => (
                                                             <button
+                                                                type='button'
                                                                 onClick={() => toggleLanguage('en')}
                                                                 className={`${
                                                                     active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
@@ -62,6 +68,7 @@ const Topbar = () => {
                                                     <Menu.Item>
                                                         {({ active }) => (
                                                             <button
+                                                                type='button'
                                                                 onClick={() => toggleLanguage('zh')}
                                                                 className={`${
                                                                     active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
@@ -78,9 +85,9 @@ const Topbar = () => {
                                 </div>
                                 <div className="hidden sm:block">
                                     <button 
-                                        className="w-[127px] h-[50px] rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] font-bold"
+                                        type='button'
+                                        className="w-[127px] h-[50px] rounded-[7px] md:rounded-[10px] bg-gradient-to-br from-primary-25 via-primary-50 to-primary-100 text-white text-center text-[20px] font-bold"
                                         onClick={() => setOpenModalApp(true)}
-                                        style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight: "normal" }}
                                     >
                                         {/* {t('Topbar:downloadButton')} */}
                                         {t('downloadButton')}
@@ -93,7 +100,8 @@ const Topbar = () => {
                                         <Menu as="div" className="relative inline-block text-left">
                                             <div>
                                                 <Menu.Button>
-                                                    <img src={World} alt="icon" className="w-10 h-10 cursor-pointer" />
+                                                    {/* <img src={World} alt="icon" className="w-10 h-10 cursor-pointer" /> */}
+                                                    <WordMobileIcon/>
                                                 </Menu.Button>
                                             </div>
                                             <Transition
@@ -110,6 +118,7 @@ const Topbar = () => {
                                                         <Menu.Item>
                                                             {({ active }) => (
                                                                 <button
+                                                                    type='button'
                                                                     onClick={() => toggleLanguage('en')}
                                                                     className={`${
                                                                         active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
@@ -122,6 +131,7 @@ const Topbar = () => {
                                                         <Menu.Item>
                                                             {({ active }) => (
                                                                 <button
+                                                                    type='button'
                                                                     onClick={() => toggleLanguage('zh')}
                                                                     className={`${
                                                                         active ? 'bg-white opacity-50 text-gray-900' : 'text-white'
@@ -139,12 +149,16 @@ const Topbar = () => {
                                 </div>
                             </div>
                             <div className="flex sm:hidden">
-                                <img 
+                                {/* <img 
                                     src={DownloadIcon} 
                                     alt="Download" 
                                     style={{ cursor: 'pointer' }} 
                                     onClick={() => setOpenModalApp(true)} 
-                                />
+                                /> */}
+                                <button type='button' onClick={() => setOpenModalApp(true)}>
+                                    <DownloadIcon />
+                                </button>
+                                
                             </div>
                         </div>
                     </div>

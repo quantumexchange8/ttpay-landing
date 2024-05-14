@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Icon from '../assets/images/icon.svg';
 import Close from '../assets/images/close.svg';
 import { useTranslation } from 'react-i18next';
+import { IconModal, IconModalMobile } from './Icon';
 
 const ModalContact = ({ open, onClose }) => {
     const { t } = useTranslation();
@@ -44,8 +44,11 @@ const ModalContact = ({ open, onClose }) => {
                     <div className='flex flex-col gap-5'>
                         <div className="relative">
                             <div className="flex justify-center items-center">
-                                <div className="rounded-[20px] flex justify-center">
-                                    <img className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]" src={Icon} alt="icon"/>
+                                <div className="rounded-[20px] justify-center hidden md:flex">
+                                    <IconModal/>
+                                </div>
+                                <div className='rounded-[20px] flex justify-center md:hidden'>
+                                    <IconModalMobile/>
                                 </div>
                                 <button className="absolute top-0 right-0 w-[24.5px] h-[24.5px] md:w-[35px] md:h-[35px] bg-gray-300 rounded-full flex justify-center items-center" onClick={handleClose}>
                                     <img className="w-[12.95px] h-[12.25px] md:w-[21px] md:h-[21px]" src={Close} alt="close"/>  
@@ -54,10 +57,10 @@ const ModalContact = ({ open, onClose }) => {
                         </div>
                         
                         <div className='flex flex-col items-center gap-2'>
-                            <div className="flex w-full flex-col justify-center flex-shrink-0 text-black text-center text-[24px] md:text-[36px] font-bold" style={{ fontFamily:"SF-Pro-Display-Bold", fontStyle:"normal", lineHeight:"normal" }}>
+                            <div className="flex w-full flex-col justify-center flex-shrink-0 text-black text-center text-[24px] md:text-[32px] md:leading-none font-bold">
                                 {t('contactModalTitle')}
                             </div>
-                            <div className="flex w-full h-[10px] md:h-[20px] flex-col justify-center flex-shrink-0 text-black text-center text-[12px] md:text-[16px] font-medium" style={{ fontFamily:"SF-Pro-Display-Medium", fontStyle:"normal", lineHeight:"normal" }}>
+                            <div className="flex w-full flex-col justify-center flex-shrink-0 text-black text-center text-[12px] md:text-[16px] md:leading-none font-medium">
                                 {t('contactTitleNormal')}
                             </div>
                         </div>
@@ -65,13 +68,13 @@ const ModalContact = ({ open, onClose }) => {
                     
                     <div>
                         <form className="flex flex-col justify-center items-center gap-12">
-                            <div className="flex flex-col items-center gap-5 md:gap-[30px]">
+                            <div className="flex flex-col items-center gap-5 md:gap-5">
                                 <FormField label={t('formName')} type="name" value={name} onChange={setName} />
                                 <FormField label={t('formEmail')} type="email" value={email} onChange={setEmail} />
                                 <FormField label={t('formMessage')} type="textarea" value={message} onChange={setMessage} />
                             </div>
                             <div className="send-button">
-                                <button type="submit" className="w-[139.6px] h-[34.9px] md:w-[200px] md:h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[13.96px] md:text-[20px] font-bold" style={{ cursor: 'pointer' }}>
+                                <button type="submit" className="w-[139.6px] h-[34.9px] md:w-[200px] md:h-[50px] rounded-[10px] bg-gradient-to-br from-indigo-600 via-indigo-800 to-black text-white flex items-center justify-center text-[13.96px] md:text-[20px] font-bold cursor-pointer">
                                     {t('formSend')}
                                 </button>
                             </div>
@@ -86,7 +89,7 @@ const ModalContact = ({ open, onClose }) => {
 const FormField = ({ label, type, value, onChange }) => {
     return (
         <div className="flex flex-col items-center gap-[10px]">
-            <label htmlFor={type} className="flex w-full h-3 flex-col justify-center items-center flex-shrink-0 font-normal" style={{ fontFamily:"SF-Pro-Display-Regular", fontStyle:"normal", lineHeight:"normal" }}>
+            <label htmlFor={type} className="flex w-full h-3 flex-col justify-center items-center flex-shrink-0 font-normal">
                 {label}
             </label>
             {type === "textarea" ? (

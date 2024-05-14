@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -26,13 +28,16 @@ module.exports = {
       'cus-lg': '1053px',
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: {
           25: '#5200FF',
           50: '#772BFF',
           100: '#010003',
         }
-      }
+      },
     },
   },
   plugins: [],
