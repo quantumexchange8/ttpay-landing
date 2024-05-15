@@ -1,8 +1,5 @@
 import { Tab } from '@headlessui/react';
 import { useState } from 'react';
-import AppStoreGrey from '../assets/images/appstore-grey.svg';
-import AppStoreLeafGrey from '../assets/images/appstore-leaf-grey.svg';
-import PlayStore from '../assets/images/playstore.svg';
 import DownloadPhone from '../assets/images/download-phone.svg'
 import { AppleModal, QRCodeModalApple, QRCodeModalGoogle, GooglePlayModal } from './Icon';
 
@@ -36,7 +33,7 @@ export default function Example() {
                         </div>
                     )}
                     <div
-                        className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[10px] font-bold md:font-normal md:text-[16px]">
+                        className="flex w-[81px] h-4 flex-col justify-center flex-shrink-0 text-center text-[10px] font-bold md:text-[16px]">
                         App Store
                     </div>
                 </div>
