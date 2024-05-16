@@ -2,13 +2,27 @@ import React from 'react'
 import Arrow from '../assets/images/arrow.svg';
 import QRCode from '../assets/images/qrcode.svg';
 import ModalApp from '../Components/ModalApp';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ModalContact from '../Components/ModalContact';
 import { useTranslation } from 'react-i18next';
 import { AppleIcon, GooglePlayIcon } from '../Components/Icon';
 
 const Footer = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [language, setLanguage] = useState(i18n.language);
+
+    useEffect(() => {
+        const languageChangeListener = () => {
+            setLanguage(i18n.language);
+        };
+
+        i18n.on('languageChanged', languageChangeListener);
+
+        return () => {
+            i18n.off('languageChanged', languageChangeListener);
+        };
+    }, [i18n]);
+
     const [openModalApp, setOpenModalApp] = useState(false);
     const [openModalContact, setOpenModalContact] = useState(false);
   return (
@@ -24,9 +38,18 @@ const Footer = () => {
                     </div>
 
                     <div className="flex w-full flex-col justify-center text-center md:text-start md:w-full text-[18px] leading-tight md:text-xl md:leading-tight font-medium">
-                        <div className="flex justify-center sm:justify-start sm:text-left md:w-[600px]">
-                            {t('part8ContentNormal')}
-                        </div>
+                        {
+                            language === 'zh' ? (
+                                <div className="w-[330px] flex justify-center sm:justify-start sm:text-left md:w-[560px]">
+                                    {t('part8ContentNormal')}
+                                </div>
+                            ) : (
+                                <div className="w-[310px] flex justify-center sm:justify-start sm:text-left md:w-[600px]">
+                                    {t('part8ContentNormal')}
+                                </div>
+                            )
+                        }
+                        
                     </div>
                 </div>
                 <div>     

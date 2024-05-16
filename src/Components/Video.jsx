@@ -2,44 +2,30 @@ import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 
-const VideoComponent = ({ src, loop = true, muted = true, autoplay = true }) => {
-  const videoRef = useRef(null);
+const VideoPlayer = () => {
+    const videoRef = useRef(null);
 
-  useEffect(() => {
-    console.log('Component mounted');
-    
-    if (!videoRef.current) {
-      console.warn('Video element not found');
-      return;
-    }
+    useEffect(() => {
+        const player = videojs(videoRef.current, {
+            loop: true,
+            muted: true,
+            autoplay: true,
+        });
 
-    // Initialize Video.js
-    const player = videojs(videoRef.current, {
-      controls: true,
-      autoplay,
-      muted,
-      loop,
-      sources: [
-        {
-          src,
-          type: 'video/mp4',
-        },
-      ],
-    });
+        return () => {
+            if (player) {
+                player.dispose();
+            }
+        };
+    }, []);
 
-    // Cleanup on unmount
-    return () => {
-      if (player) {
-        player.dispose();
-      }
-    };
-  }, [src, loop, muted, autoplay]);
-
-  return (
-    <div data-vjs-player>
-      <video ref={videoRef} className="video-js vjs-big-play-centered" />
-    </div>
-  );
+    return (
+        <div data-vjs-player>
+            <video ref={videoRef} className="video-js" preload="auto">
+                <source src="/assets/videos/home-video-3-3.mp4" type="video/mp4" />
+            </video>
+        </div>
+    );
 };
 
-export default VideoComponent;
+export default VideoPlayer;

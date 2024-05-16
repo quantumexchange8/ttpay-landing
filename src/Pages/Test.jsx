@@ -7,6 +7,7 @@ const Test = () => {
     
     return (
         <div className=" mt-40 w-full">
+            <VideoPlayer />
             <div className="w-full grid grid-cols-3 gap-[15px] justify-center md:flex md:flex-wrap md:gap-[20px]">
                 {/* <div className="w-full h-[106px] md:w-[140px] md:h-[140px]">
                     <video autoPlay muted playsInline loop className="w-full h-full rounded-[7px] md:rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" >
@@ -57,7 +58,8 @@ const Test = () => {
                 </div> */}
 
                 <div className="w-full">
-                    <VideoPlayer src="/assets/videos/home-video-3-3.mp4" />
+                    {/* <VideoPlayer src="/assets/videos/home-video-3-3.mp4" /> */}
+                
                 </div>
 
             </div>

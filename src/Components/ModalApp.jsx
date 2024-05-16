@@ -3,10 +3,24 @@ import Close from '../assets/images/close.svg';
 import TabComponent from '../Components/Tab';
 import { useTranslation } from 'react-i18next';
 import { IconModal, IconModalMobile } from '../Components/Icon';
+import { useState, useEffect } from 'react';
 
 export default function ModalApp({ open, onClose, children }) {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [language, setLanguage] = useState(i18n.language);
+
+    useEffect(() => {
+        const languageChangeListener = () => {
+            setLanguage(i18n.language);
+        };
+
+        i18n.on('languageChanged', languageChangeListener);
+
+        return () => {
+            i18n.off('languageChanged', languageChangeListener);
+        };
+    }, [i18n]);
 
     return (
         //backdrop 
@@ -31,9 +45,16 @@ export default function ModalApp({ open, onClose, children }) {
                             </div>
                         </div>
 
-                        <div className='flex flex-col items-center gap-2 md:gap-[30px]'>
-                            <div className="flex w-full md:w-[250px] flex-col justify-center text-center text-[20px] md:text-[30px] md:leading-none font-bold">
-                                    {t('downloadModalTitle')}
+                        <div className='flex flex-col items-center gap-[30px]'>
+                            <div className="flex w-[185px] md:w-full flex-col justify-center items-center text-center text-[20px] leading-tight md:text-[30px] md:leading-none font-bold">
+                                {
+                                    language === 'zh' ? (
+                                        <span>{t('downloadModalTitle')}</span>
+                                    ) : (
+                                        <span className='md:w-[250px]'>{t('downloadModalTitle')}</span>
+                                    )
+                                }
+                                    
                             </div>
 
                             <div className="flex w-[210px] md:w-[300px] flex-col justify-center text-center text-[12px] md:text-[16px] md:leading-tight font-medium">
