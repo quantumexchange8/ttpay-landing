@@ -60,7 +60,7 @@ const Home = () => {
                             {language === 'zh' ? (
                                 <div>
                                     <div className="w-full flex flex-col font-normal leading-tight md:font-semibold md:hidden">
-                                        <span className='w-[340px]'>
+                                        <span className='w-[337px]'>
                                             {t('part1ContentNormal')}
                                         </span>
                                         
@@ -275,7 +275,7 @@ const Home = () => {
 
                         <div className="w-full flex flex-col md:flex-row justify-between relative gap-[60px] md:gap-[75px]">
                             <div className="w-full flex md:flex-col h-full justify-center flex-row relative">
-                                <div className="py-2 px-4 w-[185px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center gap-3 md:gap-5 absolute top-0 left-[145px] md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
+                                <div className="py-2 px-4 w-[200px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center gap-3 md:gap-5 absolute top-0 right-2 md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className='hidden md:block'><Trc20/></div>
                                         <div className='md:hidden'><Trc20Mobile/></div>
@@ -291,7 +291,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="py-2 px-4 w-[185px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-16 right-0 md:bottom-[130px] md:left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
+                                <div className="py-2 px-4 w-[200px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-16 right-0 md:bottom-[130px] md:left-[230px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className='hidden md:block'><Trc20/></div>
                                         <div className='md:hidden'><Trc20Mobile/></div>
@@ -306,7 +306,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="py-2 px-4 w-[185px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[-30px] md:bottom-0 left-0 md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
+                                <div className="py-2 px-4 w-[200px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[-30px] md:bottom-0 left-0 md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] z-10">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className='hidden md:block'><Trc20/></div>
                                         <div className='md:hidden'><Trc20Mobile/></div>
@@ -378,31 +378,31 @@ const Home = () => {
                             </div>
                             {/* Part 3-2-notif1,2 */}
                             <div className="flex md:flex-col relative w-full h-full justify-center flex-row">
-                                <div className="py-2 px-4 w-[210px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute top-0 md:top-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-2 px-4 w-[220px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute top-0 md:top-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center">
                                             <GoogleIcon/>
                                         </div>
                                         <div className="flex flex-col gap-[7px] md:gap-[10px] w-full md:w-full">
-                                            <div className="flex w-[130px] md:w-[180px] text-xs md:text-base font-semibold leading-none md:leading-none">
+                                            <div className="flex w-full md:w-full text-xs md:text-base font-semibold leading-none md:leading-none">
                                                     {t('part4Notif1')}
                                             </div>
-                                            <div className="flex w-[110px] md:w-[180px] text-[7px] leading-none md:text-xs text-[#666] font-medium md:leading-none">
+                                            <div className="flex w-full md:w-full text-[7px] leading-none md:text-xs text-[#666] font-medium md:leading-none">
                                                     {t('part4Notif2')}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="py-2 px-4 w-[210px] md:w-[300px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[45px] right-0 md:bottom-[34px] md:right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-2 px-4 w-[220px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[45px] right-0 md:bottom-[34px] md:right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center">
                                             <GoogleDriveIcon/>
                                         </div>
                                         <div className="flex flex-col gap-[7px] md:gap-[10px] md:w-full">
-                                            <div className="flex w-[130px] md:w-[180px] text-xs md:text-base font-semibold leading-none md:leading-none">
+                                            <div className="flex w-full md:w-full text-xs md:text-base font-semibold leading-none md:leading-none">
                                                 {t('part4Notif1')}
                                             </div>
-                                            <div className="flex w-[110px] md:w-[180px] text-[7px] leading-none md:text-xs text-[#666] font-medium md:leading-none">
+                                            <div className="flex w-full md:w-full text-[7px] leading-none md:text-xs text-[#666] font-medium md:leading-none">
                                                 {t('part4Notif2')}
                                             </div>
                                         </div>
@@ -474,7 +474,7 @@ const Home = () => {
                                                 {t('part5ContentNormal')}
                                             </span>
                                         ) : (
-                                            <span className='w-[315px] md:w-[400px]'>
+                                            <span className='w-[325px] md:w-[400px]'>
                                                 {t('part5ContentNormal')}
                                             </span>
                                         )
@@ -496,7 +496,7 @@ const Home = () => {
                                                 {t('part6ContentNormal')}
                                             </div>
                                         ) : (
-                                            <div className="w-[280px] md:w-full flex justify-center sm:justify-start sm:text-left text-center ">
+                                            <div className="w-[300px] md:w-full flex justify-center sm:justify-start sm:text-left text-center ">
                                                 {t('part6ContentNormal')}
                                             </div>
                                         )
@@ -505,7 +505,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="w-full h-full flex md:flex-col relative justify-center flex-row">
-                                <div className="py-[9px] px-3 w-[185px] md:w-[300px] md:py-[14px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center absolute top-0 right-0 md:top-0 md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-[9px] px-3 w-[210px] md:w-[300px] md:py-[14px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center absolute top-0 right-0 md:top-0 md:left-[200px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     {/* <div className="flex justify-center">
                                         <div className="flex gap-[10px] w-[90px] md:w-[150px]">
                                             <div className='md:mt-[2px]'>
@@ -563,7 +563,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="py-[9px] px-3 w-[185px] md:w-[300px] md:py-[14px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center absolute md:bottom-0 bottom-0 left-[42px] md:left-[60px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-[9px] px-3 w-[210px] md:w-[300px] md:py-[14px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center items-center absolute md:bottom-0 bottom-0 left-[42px] md:left-[60px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     {/* <div className="flex justify-center">
                                         <div className="flex gap-[10px] w-[90px] md:w-[150px]">
                                             <div className='md:mt-[2px]'>

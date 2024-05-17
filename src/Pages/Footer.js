@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="w-full md:w-[1000px] mx-[22px] md:mx-0 flex flex-col justify-center md:flex-row md:justify-between items-center gap-[60px]">
                 <div className="flex flex-col gap-[30px]  md:w-[660px]">
                     <div className="flex flex-col items-center w-full text-center text-[32px] leading-tight font-bold md:leading-none md:text-start">
-                        <div className='w-[300px] md:w-full'>
+                        <div className='w-[280px] md:w-full'>
                             {t('part8ContentBoldTitle')}
                         </div>
                             
