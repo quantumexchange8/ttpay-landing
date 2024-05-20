@@ -108,7 +108,7 @@ const Footer = () => {
                         <span className='font-bold'>©</span> 2024 TTPAY
                     </span>
                     <span>
-                        ttpay.io
+                        ttpays.io
                     </span>
                     <span>
                         All rights reserved.

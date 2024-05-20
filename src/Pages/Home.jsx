@@ -257,7 +257,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Part 3 */}
-            <div className="flex justify-center my-[150px] mx-[22px]">
+            <div className="flex justify-center my-[150px] mx-[22px] md:mx-0">
                 <div className="w-full md:w-[1000px]">
                     <div className="flex flex-col gap-[150px]">
 
@@ -347,7 +347,7 @@ const Home = () => {
                                                 {t('part3ContentNormal')}
                                             </div>
                                         ) : (
-                                            <div className="w-[300px] flex justify-center sm:justify-start text-center sm:text-left md:w-full leading-tight">
+                                            <div className="w-[290px] flex justify-center sm:justify-start text-center sm:text-left md:w-full leading-tight">
                                                 {t('part3ContentNormal')}
                                             </div>
                                         )
@@ -378,7 +378,7 @@ const Home = () => {
                             </div>
                             {/* Part 3-2-notif1,2 */}
                             <div className="flex md:flex-col relative w-full h-full justify-center flex-row">
-                                <div className="py-2 px-4 w-[220px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute top-0 md:top-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-2 px-4 w-[210px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute top-0 md:top-0 left-[33px] md:left-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center">
                                             <GoogleIcon/>
@@ -393,7 +393,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="py-2 px-4 w-[220px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[45px] right-0 md:bottom-[34px] md:right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
+                                <div className="py-2 px-4 w-[210px] md:w-[320px] md:py-[15px] md:px-6 rounded-[7px] md:rounded-[10px] bg-[#dddddde6] flex justify-center gap-3 md:gap-5 absolute bottom-[45px] right-0 md:bottom-[34px] md:right-0 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)]">
                                     <div className="md:gap-5 flex justify-center items-center gap-3">
                                         <div className="flex w-[32.435px] h-[32.435px] md:w-[50px] md:h-[50px] justify-center items-center">
                                             <GoogleDriveIcon/>

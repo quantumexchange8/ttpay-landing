@@ -7,8 +7,12 @@ const Test = () => {
     
     return (
         <div className=" mt-40 w-full">
-            <VideoPlayer />
+            
             <div className="w-full grid grid-cols-3 gap-[15px] justify-center md:flex md:flex-wrap md:gap-[20px]">
+                <VideoPlayer src="/assets/videos/home-video-3-3.mp4"/>
+                {/* <video autoPlay muted playsInline loop className="w-full h-full rounded-[7px] md:rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" >
+                    <source src="/assets/videos/home-video-1-1.mp4" type="video/mp4"/>
+                </video> */}
                 {/* <div className="w-full h-[106px] md:w-[140px] md:h-[140px]">
                     <video autoPlay muted playsInline loop className="w-full h-full rounded-[7px] md:rounded-[10px] drop-shadow-[2px_2px_2px_rgba(0,0,0,0.4)] object-cover" >
                         <source src="/assets/videos/home-video-1-1.mp4" type="video/mp4"/>

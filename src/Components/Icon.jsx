@@ -1,7 +1,7 @@
 
 const Icon = () => {
     return (
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_12_86)">
             <rect width="50" height="50" rx="10" fill="url(#paint0_linear_12_86)"/>
             <path d="M33.3182 19.7614V6.25H15.7328L20.8625 10.5156L11.4782 18.1228C9.81348 19.4723 8.51185 21.0554 7.60966 22.8281C6.70747 24.601 6.25 26.4741 6.25 28.3955V36.4048H8.91985C8.91985 33.1567 10.5325 29.9843 13.3442 27.701L27.7305 16.019L33.3182 19.7614Z" fill="url(#paint1_linear_12_86)" fillOpacity="0.8"/>
@@ -36,6 +36,7 @@ const Icon = () => {
             </linearGradient>
             </defs>
         </svg>
+
 
 
         
